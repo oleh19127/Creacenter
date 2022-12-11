@@ -30,64 +30,70 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 
 */
 
-import { checkDevice } from "./modules/checkDevice.mjs"
-import { isWebp } from "./modules/isWebp.mjs"
-import { ibg } from "./modules/ibg.mjs"
-import { spoilersActive } from "./modules/spoilers.mjs"
+import { checkDevice } from "./modules/checkDevice.mjs";
+import { isWebp } from "./modules/isWebp.mjs";
+import { ibg } from "./modules/ibg.mjs";
+import { spoilersActive } from "./modules/spoilers.mjs";
 
 // VARIABLES
-const menuLinksData = document.querySelectorAll('.menu__link[data-goto]')
-const iconMenu = document.querySelector('.menu__icon')
-const menuBody = document.querySelector('.menu__body')
-const menuLinks = document.querySelectorAll('.menu__link')
-const menuArrows = document.querySelectorAll('.menu__arrow')
-const load = document.querySelector('.loading')
-const sublists = document.querySelectorAll('.menu__sublist')
+const menuLinksData = document.querySelectorAll(".menu__link[data-goto]");
+const iconMenu = document.querySelector(".menu__icon");
+const menuBody = document.querySelector(".menu__body");
+const menuLinks = document.querySelectorAll(".menu__link");
+const menuArrows = document.querySelectorAll(".menu__arrow");
+const load = document.querySelector(".loading");
+const sublists = document.querySelectorAll(".menu__sublist");
 
-window.onload = (function () {
-  load.classList.add('none');
-})
+window.onload = function () {
+  load.classList.add("none");
+};
 
-document.addEventListener('DOMContentLoaded', function () {
-  spoilersActive(menuArrows, sublists)
-  ibg()
-  isWebp()
-  checkDevice(menuArrows)
+document.addEventListener("DOMContentLoaded", function () {
+  spoilersActive(menuArrows, sublists);
+  ibg();
+  isWebp();
+  checkDevice(menuArrows);
 
   // SCROLL
   if (menuLinksData) {
-    menuLinksData.forEach(menuLink => {
-      menuLink.addEventListener('click', onMenuLinkClick)
-    })
+    menuLinksData.forEach((menuLink) => {
+      menuLink.addEventListener("click", onMenuLinkClick);
+    });
     function onMenuLinkClick(e) {
-      const menuLink = e.target
-      if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-        const gotoBlock = document.querySelector(menuLink.dataset.goto)
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight
+      const menuLink = e.target;
+      if (
+        menuLink.dataset.goto &&
+        document.querySelector(menuLink.dataset.goto)
+      ) {
+        const gotoBlock = document.querySelector(menuLink.dataset.goto);
+        const gotoBlockValue =
+          gotoBlock.getBoundingClientRect().top +
+          pageYOffset -
+          document.querySelector("header").offsetHeight;
         window.scrollTo({
           top: gotoBlockValue,
-          behavior: 'smooth'
-        })
-        e.preventDefault()
+          behavior: "smooth",
+        });
+        e.preventDefault();
       }
     }
   }
 
   // BURGER
   if (iconMenu) {
-    iconMenu.onclick = (() => {
-      iconMenu.classList.toggle('_active')
-      menuBody.classList.toggle('_active')
-      document.body.classList.toggle('_lock')
-    })
+    iconMenu.onclick = () => {
+      iconMenu.classList.toggle("_active");
+      menuBody.classList.toggle("_active");
+      document.body.classList.toggle("_lock");
+    };
   }
 
   // CLOSE MENU WHEN CLICK ON LINK
   for (const link of menuLinks) {
-    link.onclick = (() => {
-      document.body.classList.remove('_lock')
-      iconMenu.classList.remove('_active')
-      menuBody.classList.remove('_active')
-    })
+    link.onclick = () => {
+      document.body.classList.remove("_lock");
+      iconMenu.classList.remove("_active");
+      menuBody.classList.remove("_active");
+    };
   }
-})
+});

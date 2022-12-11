@@ -6,6 +6,27 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: Montserrat-Italic;
+	font-display: swap;
+	src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: Montserrat-Light;
+	font-display: swap;
+	src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat-LightItalic;
+	font-display: swap;
+	src: url("../fonts/Montserrat-LightItalic.woff2") format("woff2"), url("../fonts/Montserrat-LightItalic.woff") format("woff");
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
 	font-family: Montserrat-Medium;
 	font-display: swap;
 	src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
@@ -20,9 +41,9 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Poppins-BlackItalic;
+	font-family: Montserrat-SemiBold;
 	font-display: swap;
-	src: url("../fonts/Poppins-BlackItalic.woff2") format("woff2"), url("../fonts/Poppins-BlackItalic.woff") format("woff");
-	font-weight: 900;
-	font-style: italic;
+	src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
 }
