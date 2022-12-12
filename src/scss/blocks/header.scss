@@ -41,6 +41,23 @@
       }
     }
   }
+  .search-input {
+    position: relative;
+    input {
+      border-bottom: 1px solid $main;
+      padding-bottom: 5px;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .change-language {
+  }
 }
 
 .menu {
@@ -138,6 +155,7 @@
   }
 
   &__list {
+    font-family: Montserrat-Bold;
     li {
       position: relative;
       margin: 0px 0px 0px 20px;
@@ -161,52 +179,75 @@
       align-items: center;
 
       li {
-        padding: 10px 0px;
+        // padding: 10px 0px;
       }
     }
   }
 
   &__link {
-    color: white;
-    font-size: 18px;
+    position: relative;
+    color: $black;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: -10px;
+      width: 2px;
+      height: 18px;
+      background: $orange;
+      transform: translateY(-50%);
+    }
+    // &:last-child {
+    //   &::before {
+    //     background: none;
+    //   }
+    // }
 
     &:hover {
-      text-decoration: underline;
+      color: $orange;
+      transition: color 0.3s linear;
     }
 
     @media screen and (max-width: 767px) {
       font-size: 24px;
     }
+    &.orange {
+      transition: color 0.3s linear;
+      color: $orange;
+    }
   }
 
   &__sublist {
+    display: none;
     position: absolute;
     top: 100%;
-    right: 0;
-    background: black;
-    padding: 15px;
-    min-width: 150px;
-    visibility: hidden;
-    opacity: 0;
+    left: 0;
+    background: transparent;
+    // padding: 20px;
+    // min-width: 150px;
 
-    &.open {
-      transition: 0.2s visibility linear, 0.2s opacity linear;
-      visibility: visible;
-      opacity: 1;
+    // &.open {
+    //   transition: 0.2s visibility linear, 0.2s opacity linear;
+    //   visibility: visible;
+    //   opacity: 1;
 
-      @media screen and (max-width: 767px) {
-        height: 100%;
-        width: 100%;
-        margin: 20px 0px 0px 0;
-        padding: 10px;
-      }
-    }
+    // @media screen and (max-width: 767px) {
+    //   height: 100%;
+    //   width: 100%;
+    //   margin: 20px 0px 0px 0;
+    //   padding: 10px;
+    // }
+    // }
 
     li {
-      margin: 0px 0px 10px 0px;
-
-      &:last-child {
-        margin: 0;
+      margin: 0px;
+      a {
+        padding: 7px 0px;
       }
     }
 
@@ -222,10 +263,13 @@
   }
 
   &__sublink {
-    color: white;
-
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    color: $main-dark;
+    transition: color 0.3s linear;
     &:hover {
-      text-decoration: underline;
+      transition: color 0.3s linear;
+      color: $orange;
     }
 
     @media screen and (max-width: 767px) {
@@ -236,17 +280,15 @@
 }
 
 .menu__arrow {
-  display: block;
-  width: 0;
-  height: 0;
   transition: transform 0.3s ease 0s;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 10px solid white;
-  margin: 0px 0px 0px 5px;
-
+  border: solid $main-dark;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  margin: 0px 0px 0px 20px;
   &._active {
-    transform: rotate(90deg);
+    transform: rotate(-135deg);
   }
 }
 
