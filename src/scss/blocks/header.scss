@@ -161,7 +161,7 @@
         left: 0;
         height: 142px;
         background: $white;
-        z-index: 3;
+        z-index: 9999;
         @media screen and (max-width: 1399px) {
           height: 80px;
         }
