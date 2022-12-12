@@ -17,12 +17,10 @@
       <nav class="menu__body">
         <ul class="menu__list">
           <li>
-            <a data-goto=".page__section_1" href="#" class="menu__link"
-              >головна</a
-            >
+            <span class="menu__link">головна</span>
           </li>
           <li>
-            <a href="#" class="menu__link">статті</a>
+            <span class="menu__link">статті</span>
             <span class="menu__arrow"></span>
             <ul class="menu__sublist">
               <li class="sublist-li">
@@ -37,7 +35,7 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="menu__link">матеріали</a>
+            <span class="menu__link">матеріали</span>
             <span class="menu__arrow"></span>
             <ul class="menu__sublist">
               <li class="sublist-li">
@@ -52,7 +50,7 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="menu__link">Креацентр</a>
+            <span class="menu__link">Креацентр</span>
             <span class="menu__arrow"></span>
             <ul class="menu__sublist">
               <li class="sublist-li">
@@ -67,7 +65,7 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="menu__link">про нас</a>
+            <span class="menu__link">про нас</span>
             <span class="menu__arrow"></span>
             <ul class="menu__sublist">
               <li class="sublist-li">
@@ -82,28 +80,29 @@
             </ul>
           </li>
         </ul>
+        <div class="search-input">
+          <input type="text" placeholder=" type your request" />
+          <img
+            class="search-icon"
+            src="../../images/header/search.svg"
+            alt="search-icon" />
+        </div>
+        <ul class="language">
+          <li>
+            <span class="menu__link">ua</span>
+            <span class="menu__arrow"></span>
+            <ul class="menu__sublist">
+              <li class="sublist-li">
+                <a href="#" class="menu__sublink">ua</a>
+              </li>
+              <li class="sublist-li">
+                <a href="#" class="menu__sublink">ru</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="help-us">Підтримати</button>
       </nav>
     </div>
-    <div class="search-input">
-      <input type="text" placeholder=" type your request" />
-      <img
-        class="search-icon"
-        src="../../images/header/search.svg"
-        alt="search-icon" />
-    </div>
-    <ul>
-      <li>
-        <a href="#" class="menu__link">ua</a>
-        <span class="menu__arrow"></span>
-        <ul class="menu__sublist">
-          <li class="sublist-li">
-            <a href="#" class="menu__sublink">ua</a>
-          </li>
-          <li class="sublist-li">
-            <a href="#" class="menu__sublink">ru</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
   </div>
 </header>

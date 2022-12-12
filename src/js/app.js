@@ -57,8 +57,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   ibg();
 
-  $(".menu__arrow").click(function () {
-    $(this).toggleClass("_active");
+  $(document).on("click", "body", function (e) {
+    if (
+      !$(e.target).is(".menu__list") &&
+      !$(e.target).is(".menu__link") &&
+      !$(e.target).is(".menu__arrow._active") &&
+      !$(e.target).is(".menu__arrow") &&
+      !$(e.target).is(".sublist-li") &&
+      !$(e.target).is("li")
+    ) {
+      // console.log(e.target);
+      $(".menu__sublist").slideUp("slow");
+      $(".menu__link").removeClass("orange");
+      $(".menu__arrow").removeClass("_active");
+    }
+  });
+
+  $(".menu__link").click(function () {
+    $(this).closest("li").find(".menu__arrow").toggleClass("_active");
     $(this).closest("li").find(".menu__sublist").slideToggle("slow");
     $(this).closest("li").find(".menu__link").toggleClass("orange");
   });
