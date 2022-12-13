@@ -2,14 +2,9 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  // height: calc(100vh - 147px);
-  background-image: url("../images/intro/1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (max-width: 1399px) {
-    // height: calc(100vh - 80px);
-  }
 
   .swiper {
     width: 100%;
@@ -28,6 +23,7 @@
   }
 
   .swiper-slide {
+    position: relative;
     text-align: center;
     font-size: 18px;
     background: transparent;
@@ -41,6 +37,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .swiper-slide__info {
+      position: relative;
+      z-index: 999;
     }
     // .swiper-slide__button
 

@@ -95,10 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // intro slider
   let swiper = new Swiper(".intro-swiper", {
     // loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: true,
+    // },
     keyboard: {
       enabled: true,
     },

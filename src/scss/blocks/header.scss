@@ -23,6 +23,13 @@
     z-index: 9;
     display: flex;
     align-items: center;
+    img {
+      width: auto;
+      max-height: 110px;
+      @media screen and (max-width: 1399px) {
+        max-height: 70px;
+      }
+    }
   }
   .header-logo__text {
     margin-left: 15px;
