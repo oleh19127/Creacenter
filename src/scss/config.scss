@@ -12,6 +12,7 @@ $dark-grey: #727272;
 $orange: #fdac53;
 $dark-brown: #494949;
 $brown: #aa6f51;
+$main-light: #fdac53;
 
 // GENERAL DOCUMENT STYLES
 ::selection {
@@ -27,6 +28,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-family: Montserrat-Regular;
 }
 
 body {
@@ -57,7 +59,13 @@ img {
 // CUSTOME CLASS
 .wrapper {
   min-height: 100%;
-  padding-top: 142px;
+}
+
+.main {
+  // padding-top: 142px;
+  // @media screen and (max-width: 1399px) {
+  //   padding-top: 80px;
+  // }
 }
 
 ._lock {
@@ -71,7 +79,7 @@ img {
 .none {
   opacity: 0;
   visibility: hidden;
-  transition: all 0.6s linear;
+  transition: all 0.3s linear;
 }
 
 // for ibg func

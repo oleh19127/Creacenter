@@ -94,6 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // intro slider
   let swiper = new Swiper(".intro-swiper", {
+    // loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    // mousewheel: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

@@ -19,15 +19,10 @@
   }
 
   &__logo {
+    position: relative;
+    z-index: 9;
     display: flex;
-    img {
-      border-radius: 50%;
-      background: white;
-      position: relative;
-      z-index: 5;
-      width: 40px;
-      height: 40px;
-    }
+    align-items: center;
   }
   .header-logo__text {
     margin-left: 15px;
@@ -48,7 +43,7 @@
     position: relative;
     margin: 0px 30px;
     @media (max-width: 1399px) {
-      margin-top: 40px;
+      margin: 60px 0px 35px 0px;
     }
 
     input {
@@ -146,11 +141,16 @@
       height: 100%;
       background: $white;
       padding: 100px 30px 30px 30px;
+      transition: background-color 0.3s linear;
       transition: left 0.3s ease 0s;
       overflow: auto;
 
       &._active {
         left: 0;
+        &::before {
+          transition: background-color 1s linear;
+          background-color: $white;
+        }
       }
 
       &::before {
@@ -160,7 +160,7 @@
         top: 0;
         left: 0;
         height: 142px;
-        background: $white;
+        background: transparent;
         z-index: 9999;
         @media screen and (max-width: 1399px) {
           height: 80px;
@@ -186,7 +186,7 @@
         margin-right: 0px;
       }
       &:first-child {
-        margin-right: 20px;
+        margin-right: 22px;
         @media screen and (max-width: 1399px) {
           margin-right: 0px;
         }
@@ -206,11 +206,6 @@
         }
       }
     }
-
-    // @media screen and (min-width: 1399px) {
-    //   display: flex;
-    //   align-items: center;
-    // }
   }
 }
 
@@ -221,7 +216,7 @@
   display: inline-block;
   padding: 3px;
   transform: rotate(45deg);
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 4px 20px;
   &._active {
     transform: rotate(-135deg);
   }
@@ -230,10 +225,25 @@
 .menu__sublist {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 170%;
   left: 0;
-  background: transparent;
+  background: $white;
   z-index: 99;
+  width: 100%;
+  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    transition: all 0.3s linear;
+    border-bottom: 12px solid $white;
+  }
   // padding: 20px;
   // min-width: 150px;
 
@@ -252,6 +262,7 @@
 
   li {
     margin: 0px;
+
     &:first-child {
       margin: 0;
     }
@@ -270,12 +281,12 @@
 }
 
 .menu__sublink {
-  padding: 7px 0px;
-
-  font-family: Montserrat-Regular;
-  font-size: 14px;
+  font-size: 12px;
   color: $main-dark;
   width: 100%;
+  height: 100%;
+  padding: 8px 0px;
+
   transition: color 0.3s linear;
   &:hover {
     transition: color 0.3s linear;
@@ -284,7 +295,7 @@
 
   @media screen and (max-width: 1399px) {
     font-size: 20px;
-    color: black;
+    color: $black;
   }
 }
 
@@ -326,9 +337,11 @@
 }
 
 .language {
+  position: relative;
+  z-index: 9;
   li {
     position: relative;
-    margin-top: 7px;
+    // margin-top: 7px;
     span.menu__link {
       &::before {
         content: none;
@@ -340,15 +353,19 @@
     }
   }
   .menu__arrow {
-    margin: 0px 0px 0px 4px;
+    margin: 0px 0px 5px 4px;
   }
+  // .menu__sublist {
+  //   top: 100%;
+  //   left: 0;
+  // }
   .sublist-li {
     a {
       padding: 10px 0px;
     }
   }
   @media screen and (max-width: 1399px) {
-    margin: 15px 0px;
+    margin: 0px 50px 0px 0px;
   }
 }
 
@@ -369,3 +386,18 @@
     margin-left: 0px;
   }
 }
+
+// .triangle {
+//   position: absolute;
+//   top: -11px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   .arrow-up {
+//     width: 0;
+//     height: 0;
+//     border-left: 12px solid transparent;
+//     border-right: 12px solid transparent;
+//     transition: all .3s linear;
+//     border-bottom: 12px solid $white;
+//   }
+// }
