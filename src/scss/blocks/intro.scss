@@ -1,0 +1,90 @@
+.intro {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 147px);
+  background-image: url("../images/intro/1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $white;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    // .swiper-slide__button
+
+    &__button {
+      button {
+        font-family: Montserrat-Regular;
+        padding: 15px 30px;
+        color: $white;
+        background-color: $black;
+        font-size: 16px;
+        transition: background-color 0.3s linear;
+        &:hover {
+          transition: background-color 0.3s linear;
+          background-color: $main-dark;
+          cursor: pointer;
+        }
+      }
+      margin-bottom: 20px;
+    }
+
+    // .swiper-slide__text
+
+    &__text {
+      padding: 0px 20px;
+      @include adaptiv-value("font-size", 40, 20, 0);
+      font-family: Montserrat-Bold;
+      max-width: 800px;
+    }
+  }
+  .swiper-button-next {
+    color: $white;
+    font-weight: bold;
+    right: 10%;
+    @media screen and (max-width: 1091px) {
+      right: 1%;
+    }
+    @media screen and (max-width: 872px) {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    color: $white;
+    font-weight: bold;
+    left: 10%;
+    @media screen and (max-width: 1091px) {
+      left: 1%;
+    }
+    @media screen and (max-width: 872px) {
+      display: none;
+    }
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet{
+      background-color: $white;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      transition: background-color .3s linear;
+      background-color: $orange !important;
+    }
+  }
+}

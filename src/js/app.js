@@ -83,31 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".search-input img").addClass("none");
   });
 
-  // SCROLL
-  // if (menuLinksData) {
-  //   menuLinksData.forEach((menuLink) => {
-  //     menuLink.addEventListener("click", onMenuLinkClick);
-  //   });
-  //   function onMenuLinkClick(e) {
-  //     const menuLink = e.target;
-  //     if (
-  //       menuLink.dataset.goto &&
-  //       document.querySelector(menuLink.dataset.goto)
-  //     ) {
-  //       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-  //       const gotoBlockValue =
-  //         gotoBlock.getBoundingClientRect().top +
-  //         pageYOffset -
-  //         document.querySelector("header").offsetHeight;
-  //       window.scrollTo({
-  //         top: gotoBlockValue,
-  //         behavior: "smooth",
-  //       });
-  //       e.preventDefault();
-  //     }
-  //   }
-  // }
-
   // BURGER
   if (iconMenu) {
     iconMenu.onclick = () => {
@@ -117,31 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // CLOSE MENU WHEN CLICK ON LINK
-  // for (const link of menuLinks) {
-  //   link.onclick = () => {
-  //     document.body.classList.remove("_lock");
-  //     iconMenu.classList.remove("_active");
-  //     menuBody.classList.remove("_active");
-  //   };
-  // }
-  // ACTION LISTEN
-  function documentActions(e) {
-    const targetElement = e.target;
-    if (
-      !targetElement.closest(".menu__arrow") &&
-      document.querySelector(".menu__arrow._active") &&
-      !targetElement.closest(".menu__sublist") &&
-      document.querySelector(".menu__sublist.open")
-    ) {
-      for (const arrow of arrows) {
-        arrow.classList.remove("_active");
-      }
-      for (const sublist of sublists) {
-        sublist.classList.remove("open");
-      }
-    }
-    // console.log(targetElement)
-  }
-  document.addEventListener("click", documentActions);
+  // intro slider
+  let swiper = new Swiper(".intro-swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
 });
