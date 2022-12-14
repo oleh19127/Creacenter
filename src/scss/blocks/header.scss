@@ -346,6 +346,17 @@
 .language {
   position: relative;
   z-index: 9;
+  font-size: 16px;
+  color: $main-dark;
+  .menu__sublist {
+    @media screen and (max-width: 1399px) {
+      position: absolute;
+      top: 37px;
+      .menu__sublink {
+        font-size: 16px;
+      }
+    }
+  }
   li {
     position: relative;
     // margin-top: 7px;
@@ -356,29 +367,26 @@
       }
       &:hover {
         color: inherit;
+        cursor: pointer;
       }
     }
   }
   .menu__arrow {
     margin: 0px 0px 5px 4px;
   }
-  // .menu__sublist {
-  //   top: 100%;
-  //   left: 0;
-  // }
   .sublist-li {
     a {
       padding: 10px 0px;
     }
   }
   @media screen and (max-width: 1399px) {
-    margin: 0px 50px 0px 0px;
+    margin: 0px 40px 0px 0px;
   }
 }
 
 .help-us {
-  padding: 30px;
-  margin-left: 30px;
+  padding: 20px;
+  margin-left: 20px;
   font-size: 18px;
   font-family: Montserrat-Bold;
   color: $white;
