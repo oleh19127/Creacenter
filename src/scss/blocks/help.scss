@@ -1,0 +1,44 @@
+.help {
+  margin: 200px 0px 0px 0px;
+  background: $main-light;
+  padding: 30px 0px;
+  @media screen and (max-width: 991px) {
+    margin-top: 0px;
+  }
+  // .help__logo
+
+  .col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 771px) {
+      flex-direction: column;
+    }
+
+  }
+  &__logo {
+    img {
+    }
+  }
+
+  // .help__text
+
+  &__text {
+    margin: 0px 10px;
+    font-size: 33px;
+    font-family: Montserrat-Bold;
+    color: $black;
+    text-align: center;
+    @media screen and (max-width: 1413px) {
+      @include adaptiv-value("font-size", 30, 16, 0);
+    }
+    @media screen and (max-width: 771px) {
+      margin: 20px 10px;
+    }
+  }
+
+  // .help__help-us
+
+  &__help-us {
+  }
+}

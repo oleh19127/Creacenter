@@ -92,7 +92,7 @@
     bottom: 0;
   }
   @media screen and (max-width: 686px){
-    flex-wrap: wrap;
+    flex-direction: column;
   }
   &__block {
     padding: 80px;
@@ -107,9 +107,11 @@
     text-align: center;
     @media screen and (max-width: 991px) {
       padding: 25px;
+      border: none;
     }
     @media screen and (max-width: 686px){
-      margin-right: 0px;
+      margin-bottom: 10px;
+      margin-right: 0;
     }
     &:nth-child(2) {
       img {
