@@ -1,0 +1,137 @@
+.about {
+  position: relative;
+  padding: 100px 0px;
+  @media screen and (max-width: 991px) {
+    padding: 50px 0px;
+  }
+  // .about__title
+
+  &__title {
+    position: absolute;
+    top: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px 170px;
+    background: $white;
+    @include adaptiv-value("font-size", 70, 45, 0);
+    color: $black;
+    font-family: Montserrat-Bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    @media screen and (max-width: 1308px) {
+      padding: 25px 100px;
+    }
+    @media screen and (max-width: 991px) {
+      position: relative;
+      padding: 0px 0px 30px 0px;
+    }
+  }
+
+  .about__body {
+    padding: 50px 0px;
+    background-image: url("../../images/about/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+  }
+
+  // .about__logo
+
+  &__logo {
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 200px;
+      width: auto;
+    }
+    @media screen and (max-width: 686px){
+      padding: 100px 20px;
+
+    }
+  }
+
+  // .about__text
+
+  &__text {
+    padding: 100px 15px;
+    p {
+      color: $white;
+      @include adaptiv-value("font-size", 35, 18, 0);
+      span {
+        font-family: Montserrat-Bold;
+      }
+      @media screen and (max-width: 991px) {
+        color: $main-dark;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      padding: 50px 15px;
+    }
+    @media screen and (max-width: 686px){
+      padding: 25px 15px;
+    }
+  }
+}
+
+.about-icons {
+  // .about-icons__block
+  position: absolute;
+  bottom: -18%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+
+  @media screen and (max-width: 991px) {
+    position: relative;
+    bottom: 0;
+  }
+  @media screen and (max-width: 686px){
+    flex-wrap: wrap;
+  }
+  &__block {
+    padding: 80px;
+    margin-right: 20px;
+    background: $main-dark;
+    border: 6px solid $white;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (max-width: 991px) {
+      padding: 25px;
+    }
+    @media screen and (max-width: 686px){
+      margin-right: 0px;
+    }
+    &:nth-child(2) {
+      img {
+        margin-left: 18px;
+      }
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 80px;
+      min-width: 80px;
+      max-width: 100px;
+      max-height: 100px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: Montserrat-Bold;
+      @include adaptiv-value("font-size", 20, 16, 0);
+      color: $white;
+    }
+  }
+}
