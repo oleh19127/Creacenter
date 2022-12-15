@@ -57,6 +57,12 @@ img {
 }
 
 // CUSTOME CLASS
+.mb-4 {
+  margin-bottom: 40px;
+  @media screen and (max-width: 991px){
+    margin-bottom: 20px;
+  }
+}
 .wrapper {
   min-height: 100%;
 }
