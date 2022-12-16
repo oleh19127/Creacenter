@@ -34,6 +34,13 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 // const menuLinksData = document.querySelectorAll(".menu__link[data-goto]");
 
 $(document).ready(function () {
+
+  // SCROLL TOP
+  $(".go-up").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+    return false;
+  });
+  
   // PRELOAD
   // $(".loading").addClass("none");
   $("body").removeClass("_lock");
