@@ -3,7 +3,16 @@
   width: 100%;
   height: 100%;
   padding: 120px 0px 50px 0px;
-  // .creationists__title
+  @media screen and (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  .news-footer {
+    a {
+      color: $dark-brown;
+      border-color: $dark-brown;
+    }
+  }
 
   .col-12 {
     &:first-child {
@@ -13,11 +22,13 @@
       margin-bottom: 44px;
     }
   }
+  // .creationists__title
+
   &__title {
     position: relative;
     display: inline;
     font-family: Montserrat-Bold;
-    @include adaptiv-value("font-size", 70, 45, 0);
+    @include adaptiv-value("font-size", 70, 40, 0);
     color: $black;
     &::after,
     &::before {
@@ -48,9 +59,22 @@
         height: 40px;
       }
     }
+    @media screen and (max-width: 767px) {
+      text-align: center;
+
+      &::before {
+        bottom: 120px;
+      }
+      &::after {
+        top: 120px;
+      }
+    }
   }
 }
 .creationists-block {
+  @media screen and (max-width: 991px) {
+    margin-bottom: 30px;
+  }
 }
 .creationists-block-profile {
   // .creationists-block-profile__info
@@ -87,6 +111,10 @@
   img {
     width: 280px;
     height: 280px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   // .creationists-block-profile-info__description
@@ -94,8 +122,8 @@
   &__description {
     position: absolute;
     bottom: 2%;
-    left: 70%;
-    transform: translateX(-70%);
+    right: 6%;
+    transform: translateX(-6%);
     background: $white;
     padding: 25px 0px 25px 25px;
     max-width: 160px;
@@ -103,6 +131,10 @@
     @media screen and (max-width: 1200px) {
       width: 100%;
       bottom: -24%;
+      right: 0;
+    }
+    @media screen and (max-width: 767px) {
+      bottom: -65px;
     }
 
     h6 {
@@ -110,6 +142,9 @@
       font-size: 18px;
       color: $main-dark;
       margin-bottom: 20px;
+      span {
+        text-transform: uppercase;
+      }
     }
     p {
       position: relative;
