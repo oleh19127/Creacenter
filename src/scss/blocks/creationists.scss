@@ -17,9 +17,12 @@
   .col-12 {
     &:first-child {
       display: flex;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
       margin-bottom: 44px;
+      @media screen and (max-width: 991px) {
+        justify-content: center;
+      }
     }
   }
   // .creationists__title
@@ -28,8 +31,9 @@
     position: relative;
     display: inline;
     font-family: Montserrat-Bold;
-    @include adaptiv-value("font-size", 70, 40, 0);
+    @include adaptiv-value("font-size", 60, 40, 0);
     color: $black;
+    margin-left: 50px;
     &::after,
     &::before {
       content: "";
@@ -42,14 +46,14 @@
     }
     &::after {
       top: 78px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 8%;
+      transform: translateX(-8%);
       height: 60px;
     }
     &::before {
       bottom: 70px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 8%;
+      transform: translateX(-8%);
       height: 60px;
     }
     @media screen and (max-width: 991px) {
@@ -61,11 +65,22 @@
     }
     @media screen and (max-width: 767px) {
       text-align: center;
-
       &::before {
+        bottom: 80px;
+      }
+      &::after {
+        top: 80px;
+      }
+    }
+    @media screen and (max-width: 489px) {
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 120px;
       }
       &::after {
+        left: 50%;
+        transform: translateX(-50%);
         top: 120px;
       }
     }
@@ -97,6 +112,10 @@
       height: auto;
       align-self: flex-start;
       margin: -28px 5px 0px 0px;
+      @media screen and (max-width: 767px) {
+        width: 30px;
+        margin: -9px 5px 0px 0px;
+      }
     }
     p {
       @include adaptiv-value("font-size", 20, 17, 0);
@@ -131,7 +150,7 @@
     @media screen and (max-width: 1200px) {
       width: 100%;
       bottom: -24%;
-      right: 0;
+      right: 0%;
     }
     @media screen and (max-width: 767px) {
       bottom: -65px;
