@@ -59,7 +59,7 @@ img {
 // CUSTOME CLASS
 .mb-4 {
   margin-bottom: 40px;
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 991px) {
     margin-bottom: 20px;
   }
 }
@@ -68,10 +68,22 @@ img {
 }
 
 .main {
+  position: relative;
   // padding-top: 142px;
   // @media screen and (max-width: 1399px) {
   //   padding-top: 80px;
   // }
+  .go-up {
+    position: fixed;
+    right: 8px;
+    bottom: 0;
+    padding: 20px;
+    background: $main-dark;
+    z-index: 999;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 ._lock {

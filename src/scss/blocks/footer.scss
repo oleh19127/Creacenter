@@ -69,17 +69,6 @@
     font-size: 14px;
     color: $white;
   }
-  .go-up {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 20px;
-    background: $main-dark;
-    z-index: 999;
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 
 .footer-social-icons {

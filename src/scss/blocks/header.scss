@@ -147,10 +147,11 @@
       width: 100%;
       height: 100%;
       background: $white;
-      padding: 100px 30px 30px 30px;
+      padding: 150px 30px 30px 30px;
       transition: background-color 0.3s linear;
       transition: left 0.3s ease 0s;
       overflow: auto;
+      justify-content: start;
 
       &._active {
         left: 0;

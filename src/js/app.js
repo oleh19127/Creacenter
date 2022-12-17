@@ -34,19 +34,38 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 // const menuLinksData = document.querySelectorAll(".menu__link[data-goto]");
 
 $(document).ready(function () {
+  $(window).scroll(function () {
+    if (1 < $(this).scrollTop()) {
+      $(".go-up").addClass("none");
+    } else {
+      $(".go-up").removeClass("none");
+    }
+  });
 
   // SCROLL TOP
-  $(".go-up").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, 1000);
+  $(".go-up").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
   });
-  
+
   // PRELOAD
   // $(".loading").addClass("none");
   $("body").removeClass("_lock");
 
   // DYNAMIC ADAPTIVE
   useDynamicAdapt();
+
+  $(".language li").click(function () {
+    $(".menu__list li .menu__sublist").slideUp("slow");
+    $(".menu__list li .menu__link").removeClass("orange");
+    $(".menu__list li .menu__arrow").removeClass("_active");
+  });
+
+  $(".menu__list li").click(function () {
+    $(".language li .menu__sublist").slideUp("slow");
+    $(".language li .menu__link").removeClass("orange");
+    $(".language li .menu__arrow").removeClass("_active");
+  });
 
   // BODY LISTENER
   $(document).on("click", "body", function (e) {
@@ -58,7 +77,6 @@ $(document).ready(function () {
       !$(e.target).is(".sublist-li") &&
       !$(e.target).is("li")
     ) {
-      // console.log(e.target);
       $(".menu__sublist").slideUp("slow");
       $(".menu__link").removeClass("orange");
       $(".menu__arrow").removeClass("_active");
