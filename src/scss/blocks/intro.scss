@@ -29,7 +29,7 @@
     font-size: 18px;
     background: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     flex-direction: column;
     color: $white;
@@ -45,6 +45,7 @@
     .swiper-slide__info {
       position: relative;
       z-index: 999;
+      margin-bottom: 150px;
     }
     // .swiper-slide__button
 
@@ -77,6 +78,8 @@
     color: $white;
     font-weight: bold;
     right: 10%;
+    top: 60%;
+    transform: translateY(-60%);
     @media screen and (max-width: 1091px) {
       right: 1%;
     }
@@ -89,6 +92,8 @@
     color: $white;
     font-weight: bold;
     left: 10%;
+    top: 60%;
+    transform: translateY(-60%);
     @media screen and (max-width: 1091px) {
       left: 1%;
     }

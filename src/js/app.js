@@ -35,12 +35,15 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 
 $(document).ready(function () {
   $(window).scroll(function () {
-    if (1 < $(this).scrollTop()) {
-      $(".go-up").addClass("none");
-    } else {
-      $(".go-up").removeClass("none");
+    var scroll = $(window).scrollTop();
+
+    //>=, not <=
+    console.log(scroll);
+    if (scroll > 500) {
+      //clearHeader, not clearheader - caps H
+      $(".go-up").addClass("darkHeader");
     }
-  });
+  }); //missing );
 
   // SCROLL TOP
   $(".go-up").click(function () {
