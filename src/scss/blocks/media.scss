@@ -4,12 +4,14 @@
   height: 100%;
   padding: 120px 0px 50px 0px;
   background: $main-dark;
+
   .col-12:first-child {
     margin-bottom: 40px;
     @media screen and (max-width: 991px) {
       text-align: center;
     }
   }
+
   @media screen and (max-width: 991px) {
     padding-top: 90px;
   }
@@ -23,6 +25,7 @@
     @include adaptiv-value("font-size", 70, 45, 0);
     color: $white;
     margin-left: 50px;
+
     &::after,
     &::before {
       content: "";
@@ -33,18 +36,21 @@
       background: $white;
       z-index: 99;
     }
+
     &::after {
       top: 78px;
       left: 50%;
       transform: translateX(-50%);
       height: 60px;
     }
+
     &::before {
       bottom: 70px;
       left: 50%;
       transform: translateX(-50%);
       height: 60px;
     }
+
     @media screen and (max-width: 991px) {
       margin-left: 0px;
       &::after,
@@ -61,6 +67,7 @@
 
     &__player {
       position: relative;
+
       iframe {
         width: 100%;
         height: 307px;
@@ -68,6 +75,7 @@
           height: 260px;
         }
       }
+
       img {
         position: absolute;
         top: 50%;
@@ -85,16 +93,22 @@
       display: flex;
       align-items: center;
       margin-top: 15px;
+
       img {
         width: 23px;
         height: 23px;
         margin-right: 35px;
+        @media screen and (max-width: 445px) {
+          margin-right: 15px;
+        }
       }
+
       p {
         position: relative;
         font-family: Montserrat-Bold;
         @include adaptiv-value("font-size", 18, 16, 0);
         color: $white;
+
         &::after {
           content: "";
           position: absolute;
@@ -105,6 +119,9 @@
           height: 100%;
           background: $white;
           z-index: 99;
+          @media screen and (max-width: 445px) {
+            left: -7px;
+          }
         }
       }
     }
@@ -117,10 +134,12 @@
 
     &__player {
       position: relative;
+
       iframe {
         width: 100%;
         height: 265px;
       }
+
       img {
         position: absolute;
         top: 50%;
@@ -139,6 +158,7 @@
       @media screen and (max-width: 991px) {
         margin-bottom: 20px;
       }
+
       p {
         position: relative;
         font-family: Montserrat-Bold;
