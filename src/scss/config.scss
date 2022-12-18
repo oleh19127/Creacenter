@@ -82,11 +82,14 @@ img {
   right: 8px;
   bottom: 0;
   padding: 20px;
-  background: $main-dark;
-  z-index: 9;
+  background-color: $main-dark;
+  transition: background-color 0.3s linear;
+  z-index: 9999;
 
   &:hover {
     cursor: pointer;
+    background-color: $brown;
+    transition: background-color 0.3s linear;
   }
 }
 
