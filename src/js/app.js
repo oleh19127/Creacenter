@@ -34,16 +34,12 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 // const menuLinksData = document.querySelectorAll(".menu__link[data-goto]");
 
 $(document).ready(function () {
+  // ? RESIZE HEADER
   $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-
-    //>=, not <=
-    console.log(scroll);
-    if (scroll > 500) {
-      //clearHeader, not clearheader - caps H
-      $(".go-up").addClass("darkHeader");
-    }
-  }); //missing );
+    1 < $(this).scrollTop()
+      ? $(".header").addClass("min-header")
+      : $(".header").removeClass("min-header");
+  });
 
   // SCROLL TOP
   $(".go-up").click(function () {
