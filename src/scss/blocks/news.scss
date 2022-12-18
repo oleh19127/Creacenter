@@ -4,15 +4,18 @@
   height: 100%;
   padding: 120px 0px 50px 0px;
   background: $main-dark;
+
   .col-12:first-child {
     margin-bottom: 40px;
     @media screen and (max-width: 991px) {
       text-align: center;
     }
   }
+
   @media screen and (max-width: 991px) {
     padding-top: 90px;
   }
+
   &__title {
     position: relative;
     display: inline;
@@ -20,6 +23,7 @@
     @include adaptiv-value("font-size", 70, 45, 0);
     color: $white;
     margin-left: 50px;
+
     &::after,
     &::before {
       content: "";
@@ -30,18 +34,21 @@
       background: $white;
       z-index: 99;
     }
+
     &::after {
       top: 78px;
       left: 50%;
       transform: translateX(-50%);
       height: 60px;
     }
+
     &::before {
       bottom: 70px;
       left: 50%;
       transform: translateX(-50%);
       height: 60px;
     }
+
     @media screen and (max-width: 991px) {
       margin-left: 0px;
       &::after,
@@ -51,11 +58,13 @@
     }
   }
 }
+
 .news-footer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 60px;
+
   a {
     border: 1px solid $white;
     font-size: 14px;
@@ -63,26 +72,31 @@
     color: $white;
     text-transform: uppercase;
   }
+
   @media screen and (max-width: 991px) {
     margin-top: 30px;
   }
 }
+
 .left-side-news {
   // .left-side-news__main-image-container
 
   &__main-image-container {
     position: relative;
     margin-bottom: 20px;
+
     .left-side-news__description {
       position: absolute;
       bottom: 33px;
       left: 39px;
+
       p {
         font-family: Montserrat-Bold;
         @include adaptiv-value("font-size", 22, 16, 0);
         color: $white;
         margin-bottom: 20px;
       }
+
       a {
         display: flex;
         align-items: center;
@@ -90,6 +104,7 @@
         font-size: 10px;
         color: $main-light;
         text-transform: lowercase;
+
         svg {
           margin-left: 5px;
           height: 8px;
@@ -106,6 +121,7 @@
     @media screen and (max-width: 991px) {
       margin-bottom: 40px;
     }
+
     .right-side-news__image-with-title-container {
       .left-side-news__description {
         display: flex;
@@ -122,11 +138,13 @@
           color: $black;
           padding: 10px 0px;
         }
+
         p {
           font-size: 12px;
           color: $main;
           margin-bottom: 10px;
         }
+
         a {
           text-transform: lowercase;
           font-size: 10px;
@@ -135,6 +153,7 @@
           text-transform: lowercase;
           display: flex;
           align-items: center;
+
           svg {
             margin-left: 5px;
             height: 8px;
@@ -146,15 +165,18 @@
     }
   }
 }
+
 .right-side-news {
   // .right-side-news__image-with-title-container
 
   &__image-with-title-container {
     margin-bottom: 20px;
+
     img {
       width: 100%;
       height: auto;
     }
+
     .right-side__info {
       @media screen and (max-width: 767px) {
         display: flex;
@@ -162,6 +184,7 @@
         flex-direction: column;
         align-items: center;
       }
+
       a {
         display: inline-block;
         font-size: 12px;
@@ -171,6 +194,7 @@
         margin: 15px 0px;
         text-transform: uppercase;
       }
+
       p {
         font-family: Montserrat-Medium;
         @include adaptiv-value("font-size", 18, 16, 0);
@@ -191,5 +215,5 @@ table td {
 }
 
 table td:nth-child(2) {
-  width: 20px;
+  width: 10px;
 }
