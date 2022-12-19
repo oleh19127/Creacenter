@@ -30,15 +30,13 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 
 */
 
-// VARIABLES
-// const menuLinksData = document.querySelectorAll(".menu__link[data-goto]");
-
 $(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $(".go-up").addClass("none");
-    } else {
+  // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
+  $("body").scroll(function () {
+    if ($("body").scrollTop() > $(".intro").height()) {
       $(".go-up").removeClass("none");
+    } else {
+      $(".go-up").addClass("none");
     }
   });
 
@@ -54,18 +52,6 @@ $(document).ready(function () {
 
   // DYNAMIC ADAPTIVE
   useDynamicAdapt();
-
-  $(".language li").click(function () {
-    $(".menu__list li .menu__sublist").slideUp("slow");
-    $(".menu__list li .menu__link").removeClass("orange");
-    $(".menu__list li .menu__arrow").removeClass("_active");
-  });
-
-  $(".menu__list li").click(function () {
-    $(".language li .menu__sublist").slideUp("slow");
-    $(".language li .menu__link").removeClass("orange");
-    $(".language li .menu__arrow").removeClass("_active");
-  });
 
   // BODY LISTENER
   $(document).on("click", "body", function (e) {
@@ -84,6 +70,17 @@ $(document).ready(function () {
   });
 
   // MENU
+  $(".language li").click(function () {
+    $(".menu__list li .menu__sublist").slideUp("slow");
+    $(".menu__list li .menu__link").removeClass("orange");
+    $(".menu__list li .menu__arrow").removeClass("_active");
+  });
+
+  $(".menu__list li").click(function () {
+    $(".language li .menu__sublist").slideUp("slow");
+    $(".language li .menu__link").removeClass("orange");
+    $(".language li .menu__arrow").removeClass("_active");
+  });
   $(".language li, .menu__list li").click(function () {
     $(this).find(".menu__arrow").toggleClass("_active");
     $(this).find(".menu__sublist").slideToggle("slow");
@@ -105,10 +102,10 @@ $(document).ready(function () {
   // INTRO SLIDER
   let swiper = new Swiper(".intro-swiper", {
     // loop: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: true,
-    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
     keyboard: {
       enabled: true,
     },

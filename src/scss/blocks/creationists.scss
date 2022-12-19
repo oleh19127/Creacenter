@@ -23,7 +23,6 @@
   .col-12 {
     &:first-child {
       display: flex;
-      // justify-content: center;
       align-items: center;
       margin-bottom: 44px;
       @media screen and (max-width: 991px) {
@@ -105,15 +104,6 @@
 }
 
 .creationists-block-profile {
-  // .creationists-block-profile__info
-  // @media screen and (max-width: 991px) {
-  //   &:last-child {
-  //     margin-bottom: 20px;
-  //   }
-  // }
-  &__info {
-  }
-
   // .creationists-block-profile__description
 
   &__description {
@@ -195,7 +185,6 @@
         position: absolute;
         left: 0;
         top: -10px;
-        // transform: translateY(-50%);
         width: 40%;
         height: 1px;
         background: $main;

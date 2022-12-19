@@ -16,11 +16,6 @@
     }
   }
 
-  &__logo {
-    img {
-    }
-  }
-
   // .help__text
 
   &__text {
@@ -35,10 +30,5 @@
     @media screen and (max-width: 771px) {
       margin: 20px 10px;
     }
-  }
-
-  // .help__help-us
-
-  &__help-us {
   }
 }

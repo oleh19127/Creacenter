@@ -12,14 +12,20 @@
     hr {
       position: absolute;
       width: 40px;
-      height: 24px;
-      bottom: 6px;
+      height: 35px;
+      bottom: 15px;
       right: 75px;
       border-right: 2px solid $white;
       border-left: none;
       border-bottom: none;
       border-top: none;
       z-index: 9;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 30px;
     }
   }
 

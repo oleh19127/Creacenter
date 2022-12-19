@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  padding: 100px 0px 50px 0px;
+  padding: 50px 0px 50px 0px;
   background: $black;
   z-index: 10;
   overflow: hidden;
@@ -76,13 +76,6 @@
           transition: background-color 0.3s linear;
         }
       }
-
-      //&:last-child {
-      //  &:before {
-      //    width: 0;
-      //    height: 1px;
-      //  }
-      //}
 
       &:before {
         content: "";
@@ -163,11 +156,6 @@
     padding: 20px;
     background-color: $white;
     margin: 0px 5px;
-    //transition: background-color 0.3s linear;
-    //
-    //&:hover {
-    //  background-color: $main;
-    //}
 
     img {
       height: 20px;
