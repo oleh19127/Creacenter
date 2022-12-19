@@ -1,15 +1,16 @@
 @import "config";
 @import "fonts";
 
-@import "blocks/header";
-@import "blocks/intro";
-@import "blocks/news";
-@import "blocks/about";
-@import "blocks/help";
-@import "blocks/media";
-@import "blocks/subscribe";
-@import "blocks/creationists";
-@import "blocks/books";
-@import "blocks/footer";
-// @import 'blocks/icons';
 @import "blocks/preloader";
+@import "blocks/header";
+@import "blocks/index/intro";
+@import "blocks/index/news";
+@import "blocks/index/about";
+@import "blocks/index/help";
+@import "blocks/index/media";
+@import "blocks/index/subscribe";
+@import "blocks/index/creationists";
+@import "blocks/index/books";
+@import "blocks/footer";
+
+@import "blocks/about-us/intro.scss";

@@ -1,0 +1,50 @@
+.about-us-intro {
+  padding-top: 143px;
+  // .about-us-intro__title
+
+  &__title {
+    margin: 100px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-family: Montserrat-Bold;
+      @include adaptiv-value("font-size", 70, 45, 0);
+      color: $black;
+    }
+  }
+}
+
+.about-us-intro-left-side {
+  // .about-us-intro-left-side__text
+
+  &__text {
+    @include adaptiv-value("font-size", 30, 20, 0);
+    color: $main-dark;
+    margin-bottom: 40px;
+    span {
+      font-family: Montserrat-Bold;
+    }
+  }
+
+  // .about-us-intro-left-side__img
+
+  &__img {
+  }
+}
+.about-us-intro-right-side {
+  // .about-us-intro-right-side__video
+
+  &__video {
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .about-us-intro-right-side__img
+
+  &__img {
+  }
+}
