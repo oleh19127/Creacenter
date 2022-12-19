@@ -148,6 +148,7 @@
 
     p {
       padding: 0px 10px;
+      text-transform: uppercase;
       font-family: Montserrat-Bold;
       @include adaptiv-value("font-size", 20, 16, 0);
       color: $white;
