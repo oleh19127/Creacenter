@@ -1,0 +1,61 @@
+.what-we-want {
+  padding: 100px 0px;
+  @media screen and (max-width: 767px) {
+    padding: 50px 0px;
+  }
+}
+
+.what-we-want-block {
+  position: relative;
+  text-align: center;
+  padding: 50px 10px 10px 10px;
+  color: $main-dark;
+  box-shadow: 3px 6px 10px #45454540;
+  height: 360px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: box-shadow 0.3s linear;
+  &:hover {
+    box-shadow: 3px 6px 22px #45454540;
+  }
+  @media screen and (max-width: 991px) {
+    margin-bottom: 25px;
+    padding-top: 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0px 10px 10px 10px;
+    margin-bottom: 25px;
+  }
+
+  // .what-we-want-block__order
+
+  &__order {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $main-light;
+    padding: 10px 15px;
+    font-size: 22px;
+    font-family: Montserrat-Bold;
+  }
+
+  // .what-we-want-block__title
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: Montserrat-Bold;
+    @include adaptiv-value("font-size", 30, 20, 0);
+  }
+
+  // .what-we-want-block__text
+
+  &__text {
+    @include adaptiv-value("font-size", 23, 18, 0);
+    a {
+      color: $main-light;
+      text-decoration: underline;
+    }
+  }
+}
