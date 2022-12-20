@@ -31,6 +31,41 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 */
 
 $(document).ready(function () {
+  // MENU
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    $(".language li").click(function () {
+      $(".menu__list li .menu__sublist").slideUp("slow");
+      $(".menu__list li .menu__link").removeClass("orange");
+      $(".menu__list li .menu__arrow").removeClass("_active");
+    });
+
+    $(".menu__list li").click(function () {
+      $(".language li .menu__sublist").slideUp("slow");
+      $(".language li .menu__link").removeClass("orange");
+      $(".language li .menu__arrow").removeClass("_active");
+    });
+    $(".language li, .menu__list li").click(function () {
+      $(this).find(".menu__arrow").toggleClass("_active");
+      $(this).find(".menu__sublist").slideToggle("slow");
+      $(this).find(".menu__link").toggleClass("orange");
+    });
+  } else {
+    $(".language li, .menu__list li").hover(
+      function () {
+        $(this).find(".menu__arrow").addClass("_active");
+        $(this).find(".menu__sublist").stop().slideDown("slow");
+      },
+      function () {
+        $(this).find(".menu__arrow").removeClass("_active");
+        $(this).find(".menu__sublist").stop().slideUp("slow");
+      }
+    );
+  }
+
   // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
   $("body").scroll(function () {
     if ($("body").scrollTop() > $(".intro").height()) {
@@ -67,24 +102,6 @@ $(document).ready(function () {
       $(".menu__link").removeClass("orange");
       $(".menu__arrow").removeClass("_active");
     }
-  });
-
-  // MENU
-  $(".language li").click(function () {
-    $(".menu__list li .menu__sublist").slideUp("slow");
-    $(".menu__list li .menu__link").removeClass("orange");
-    $(".menu__list li .menu__arrow").removeClass("_active");
-  });
-
-  $(".menu__list li").click(function () {
-    $(".language li .menu__sublist").slideUp("slow");
-    $(".language li .menu__link").removeClass("orange");
-    $(".language li .menu__arrow").removeClass("_active");
-  });
-  $(".language li, .menu__list li").click(function () {
-    $(this).find(".menu__arrow").toggleClass("_active");
-    $(this).find(".menu__sublist").slideToggle("slow");
-    $(this).find(".menu__link").toggleClass("orange");
   });
 
   // SEARCH INPUT
