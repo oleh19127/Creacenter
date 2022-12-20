@@ -26,18 +26,19 @@
   width: 100%;
   height: 100%;
   .swiper-slide {
-    background-position: center;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 650px;
-    max-height: 650px;
+    max-height: 450px;
+    // background-size: cover;
+    // background-position: center;
+    width: auto;
   }
 
   .swiper-slide img {
-    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .swiper-pagination {
   }

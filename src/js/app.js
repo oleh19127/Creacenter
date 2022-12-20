@@ -117,47 +117,49 @@ $(document).ready(function () {
   });
 
   // INDEX SLIDER
-  let swiper = new Swiper(".intro-swiper", {
-    // loop: true,
-    lazy: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    // mousewheel: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+  if ($(".intro-swiper")) {
+    let indexSwiper = new Swiper(".intro-swiper", {
+      // loop: true,
+      lazy: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      // mousewheel: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  }
 
   //OUR TEAM SLIDER
-
-  swiper = new Swiper(".our-team-swiper", {
-    lazy: true,
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 3,
-    loop: true,
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  if ($(".our-team-swiper")) {
+    let OurTeamSwiper = new Swiper(".our-team-swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+    });
+  }
 });
 
 /**
