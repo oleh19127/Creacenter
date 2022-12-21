@@ -31,6 +31,21 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 */
 
 $(document).ready(function () {
+  $(".play-button").click(function () {
+    $(this).addClass("none");
+    $(this)
+      .closest(".media-block__player")
+      .find(".youtube-placeholder")
+      .addClass("none");
+
+    $(this).closest(".media-block__player").find("iframe")[0].src +=
+      "controlslist='nodownload'";
+
+    $(this).closest(".media-block__player").find("iframe")[0].src +=
+      "&autoplay=1";
+    ev.preventDefault();
+  });
+
   // MENU
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
