@@ -1,0 +1,18 @@
+.our-partners {
+  margin-bottom: 50px;
+  // .our-partners__title
+
+  &__title {
+    color: $black;
+    font-family: Montserrat-Bold;
+    @include adaptiv-value("font-size", 50, 40, 0);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  // .our-partners__logo
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+}
