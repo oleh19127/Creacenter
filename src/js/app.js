@@ -68,7 +68,7 @@ $(document).ready(function () {
 
   // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
   $("body").scroll(function () {
-    if ($("body").scrollTop() > $(".intro").height()) {
+    if ($("body").scrollTop() > $(".intro, .about-us-intro").height()) {
       $(".go-up").removeClass("none");
     } else {
       $(".go-up").addClass("none");
@@ -154,10 +154,14 @@ $(document).ready(function () {
         modifier: 1,
         slideShadows: false,
       },
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
   }
 });

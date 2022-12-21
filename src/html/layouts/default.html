@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    {{> head }}
+  </head>
 
-<head>
+  <body class="_lock">
+    <div class="wrapper">
+      {{> preloader }} {{> header }} {{> body }} {{> footer }}
+      <div class="go-up none">
+        <img src="../../images/footer/arrow-up.svg" alt="arrow-up" />
+      </div>
+    </div>
 
-  {{> head }}
-
-</head>
-
-<body class="_lock">
-  <div class="wrapper">
-
-    {{> preloader }}
-
-    {{> header }}
-
-    {{> body }}
-
-    {{> footer }}
-
-  </div>
-
-  {{> scripts }}
-
-</body>
-
+    {{> scripts }}
+  </body>
 </html>
