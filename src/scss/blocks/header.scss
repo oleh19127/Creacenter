@@ -280,6 +280,11 @@
     &:first-child {
       margin: 0;
       padding-top: 10px;
+      margin-bottom: 10px !important;
+
+      @media screen and (max-width: 1399px) {
+        margin-bottom: 0 !important;
+      }
     }
 
     @media screen and (max-width: 1399px) {
