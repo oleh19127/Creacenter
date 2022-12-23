@@ -1,13 +1,17 @@
 .about-us-intro {
   padding-top: 143px;
+  @media screen and (max-width: 991px) {
+    padding-top: 80px;
+  }
   // .about-us-intro__title
 
   &__title {
-    margin: 100px 0 50px 0;
+    margin: 50px 0 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
     h1 {
       font-family: Montserrat-Bold;
       @include adaptiv-value("font-size", 70, 45, 0);
@@ -37,7 +41,7 @@
   // .about-us-intro-right-side__video
 
   &__video {
-    iframe{
+    iframe {
       width: 100%;
       height: 100%;
     }

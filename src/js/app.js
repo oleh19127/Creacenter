@@ -98,7 +98,7 @@ $(document).ready(function () {
 
   // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
   $("body").scroll(function () {
-    if ($("body").scrollTop() > $(".intro, .about-us-intro").height()) {
+    if ($("body").scrollTop() > $(".intro, .about-us-intro, .help-us-intro").height()) {
       $(".go-up").removeClass("none");
     } else {
       $(".go-up").addClass("none");
