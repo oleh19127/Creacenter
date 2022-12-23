@@ -1,4 +1,8 @@
 .make-contribution {
+  padding-bottom: 100px;
+  @media screen and (max-width: 991px) {
+    padding-bottom: 50px;
+  }
   // .make-contribution__title
 
   &__title {
@@ -76,6 +80,7 @@
   // .make-contribution-additional__menu
 
   &__menu {
+    margin-top: 35px;
     position: relative;
     display: flex;
     width: 100%;
@@ -92,35 +97,63 @@
 
     .menu__arrow {
       margin-left: 10px !important;
+      margin-bottom: 1.5px;
     }
 
     // .menu__sublist
 
-    &__sublist {
-      // position: relative;
+    .menu__sublist {
+      position: relative !important;
       width: 320px;
+      top: 5px;
     }
 
     // .menu__sublink
 
-    &__sublink {
+    .menu__sublink {
+      font-size: 14px;
+      span {
+        font-family: Montserrat-Bold;
+      }
+    }
+
+    .sublist-li {
+      padding-top: 10px;
     }
   }
 }
 
 .make-contribution-touch-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
   // .make-contribution-touch-us__title
 
   &__title {
+    @include adaptiv-value("font-size", 40, 20, 0);
+    margin: 50px 0px;
+    color: $main-dark;
   }
 
   // .make-contribution-touch-us__button
 
   &__button {
+    font-family: Montserrat-Bold;
+    color: $main-dark;
+    padding: 15px 30px;
+    background: $main-light;
+    border-radius: 4px;
+    margin-bottom: 40px;
   }
 
   // .make-contribution-touch-us__subtitle
 
   &__subtitle {
+    @include adaptiv-value("font-size", 40, 20, 0);
+    color: $main-dark;
+    font-family: Montserrat-Italic;
   }
 }
