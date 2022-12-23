@@ -1,0 +1,126 @@
+.make-contribution {
+  // .make-contribution__title
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+    h2 {
+      @include adaptiv-value("font-size", 50, 27, 0);
+      color: $main-dark;
+    }
+    span {
+      font-family: Montserrat-Bold;
+    }
+  }
+}
+
+.make-contribution-block {
+  margin-bottom: 35px;
+  box-shadow: 10px 10px 20px #45454540;
+  transition: box-shadow 0.3s linear;
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 20px 10px 30px #45454540;
+  }
+  // .make-contribution-block__header
+
+  &__header {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3ffe8;
+    padding: 15px 0px;
+
+    img {
+      max-height: 30px;
+    }
+  }
+
+  // .make-contribution-block__body
+
+  &__body {
+    padding: 35px 50px;
+    @media screen and (max-width: 991px) {
+      padding: 25px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 35px 50px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.make-contribution-block-header {
+}
+.make-contribution-block-body {
+  // .make-contribution-block-body__link
+
+  &__link {
+  }
+
+  // .make-contribution-block-body__img
+
+  &__img {
+  }
+}
+.make-contribution-additional {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  // .make-contribution-additional__menu
+
+  &__menu {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+
+    // .menu__link
+    .menu__link::before {
+      display: none;
+    }
+
+    // .menu__arrow
+
+    .menu__arrow {
+      margin-left: 10px !important;
+    }
+
+    // .menu__sublist
+
+    &__sublist {
+      // position: relative;
+      width: 320px;
+    }
+
+    // .menu__sublink
+
+    &__sublink {
+    }
+  }
+}
+
+.make-contribution-touch-us {
+  // .make-contribution-touch-us__title
+
+  &__title {
+  }
+
+  // .make-contribution-touch-us__button
+
+  &__button {
+  }
+
+  // .make-contribution-touch-us__subtitle
+
+  &__subtitle {
+  }
+}

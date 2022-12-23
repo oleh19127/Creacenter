@@ -63,25 +63,11 @@ $(document).ready(function () {
       $(".language li .menu__link").removeClass("orange");
       $(".language li .menu__arrow").removeClass("_active");
     });
+
     $(".language li, .menu__list li").click(function () {
       $(this).find(".menu__arrow").toggleClass("_active");
       $(this).find(".menu__sublist").slideToggle("slow");
       $(this).find(".menu__link").toggleClass("orange");
-    });
-    // BODY LISTENER
-    $(document).on("click", "body", function (e) {
-      if (
-        !$(e.target).is(".menu__list") &&
-        !$(e.target).is(".menu__link") &&
-        !$(e.target).is(".menu__arrow._active") &&
-        !$(e.target).is(".menu__arrow") &&
-        !$(e.target).is(".sublist-li") &&
-        !$(e.target).is("li")
-      ) {
-        $(".menu__sublist").slideUp("slow");
-        $(".menu__link").removeClass("orange");
-        $(".menu__arrow").removeClass("_active");
-      }
     });
   } else {
     $(".language li, .menu__list li").hover(
@@ -96,9 +82,40 @@ $(document).ready(function () {
     );
   }
 
+  // ADDITION
+  $(".make-contribution-additional__menu").click(function () {
+    console.log("click");
+    $("li .menu__sublist").slideToggle("slow");
+    $("li .menu__link").toggleClass("orange");
+    $("li .menu__arrow").toggleClass("_active");
+  });
+
+  // BODY LISTENER
+  $(document).on("click", "body", function (e) {
+    console.log(e.target);
+    if (
+      !$(e.target).is(".menu__list") &&
+      !$(e.target).is(".menu__link") &&
+      !$(e.target).is(".menu__link.orange") &&
+      !$(e.target).is(".menu__arrow._active") &&
+      !$(e.target).is(".menu__arrow") &&
+      !$(e.target).is(".sublist-li") &&
+      !$(e.target).is("li") &&
+      !$(e.target).is(".menu__sublink") &&
+      !$(e.target).is("span")
+    ) {
+      $(".menu__sublist").slideUp("slow");
+      $(".menu__link").removeClass("orange");
+      $(".menu__arrow").removeClass("_active");
+    }
+  });
+
   // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
   $("body").scroll(function () {
-    if ($("body").scrollTop() > $(".intro, .about-us-intro, .help-us-intro").height()) {
+    if (
+      $("body").scrollTop() >
+      $(".intro, .about-us-intro, .help-us-intro").height()
+    ) {
       $(".go-up").removeClass("none");
     } else {
       $(".go-up").addClass("none");
