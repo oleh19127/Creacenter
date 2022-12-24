@@ -56,12 +56,28 @@ $(document).ready(function () {
       $(".menu__list li .menu__sublist").slideUp("slow");
       $(".menu__list li .menu__link").removeClass("orange");
       $(".menu__list li .menu__arrow").removeClass("_active");
+
+      $(".make-contribution-additional__menu .menu__sublist").slideUp("slow");
+      $(".make-contribution-additional__menu li .menu__link").removeClass(
+        "orange"
+      );
+      $(".make-contribution-additional__menu li .menu__arrow").removeClass(
+        "_active"
+      );
     });
 
     $(".menu__list li").click(function () {
       $(".language li .menu__sublist").slideUp("slow");
       $(".language li .menu__link").removeClass("orange");
       $(".language li .menu__arrow").removeClass("_active");
+
+      $(".make-contribution-additional__menu .menu__sublist").slideUp("slow");
+      $(".make-contribution-additional__menu li .menu__link").removeClass(
+        "orange"
+      );
+      $(".make-contribution-additional__menu li .menu__arrow").removeClass(
+        "_active"
+      );
     });
 
     $(".language li, .menu__list li").click(function () {
@@ -83,30 +99,48 @@ $(document).ready(function () {
   }
 
   // ADDITION
-  $(".make-contribution-additional__menu").click(function () {
-    console.log("click");
-    $("li .menu__sublist").slideToggle("slow");
-    $("li .menu__link").toggleClass("orange");
-    $("li .menu__arrow").toggleClass("_active");
+  $(".make-contribution-additional__menu li .menu__link").click(function () {
+    $(".make-contribution-additional__menu .menu__sublist").slideToggle("slow");
+    $(".make-contribution-additional__menu li .menu__link").toggleClass(
+      "orange"
+    );
+    $(".make-contribution-additional__menu li .menu__arrow").toggleClass(
+      "_active"
+    );
+
+    $(".menu__list li .menu__sublist").slideUp("slow");
+    $(".menu__list li .menu__link").removeClass("orange");
+    $(".menu__list li .menu__arrow").removeClass("_active");
+
+    $(".language li .menu__sublist").slideUp("slow");
+    $(".language li .menu__link").removeClass("orange");
+    $(".language li .menu__arrow").removeClass("_active");
   });
 
   // BODY LISTENER
   $(document).on("click", "body", function (e) {
-    console.log(e.target);
     if (
-      !$(e.target).is(".menu__list") &&
-      !$(e.target).is(".menu__link") &&
-      !$(e.target).is(".menu__link.orange") &&
-      !$(e.target).is(".menu__arrow._active") &&
-      !$(e.target).is(".menu__arrow") &&
-      !$(e.target).is(".sublist-li") &&
-      !$(e.target).is("li") &&
-      !$(e.target).is(".menu__sublink") &&
-      !$(e.target).is("span")
+      !$(e.target).is("li .menu__link") &&
+      !$(e.target).is("li .menu__sublink") &&
+      !$(e.target).is("li .menu__sublink span") &&
+      !$(e.target).is("li .sublist-li") &&
+      !$(e.target).is("li .menu__sublist")
     ) {
-      $(".menu__sublist").slideUp("slow");
-      $(".menu__link").removeClass("orange");
-      $(".menu__arrow").removeClass("_active");
+      $(".make-contribution-additional__menu").find(".menu__sublist").slideUp();
+      $(".make-contribution-additional__menu")
+        .find(".menu__link")
+        .removeClass("orange");
+      $(".make-contribution-additional__menu")
+        .find(".menu__arrow")
+        .removeClass("_active");
+
+      $(".language li .menu__arrow").removeClass("_active");
+      $(".language li .menu__sublist").slideUp("slow");
+      $(".language li .menu__link").removeClass("orange");
+
+      $(".menu__list li .menu__arrow").removeClass("_active");
+      $(".menu__list li .menu__sublist").slideUp("slow");
+      $(".menu__list li .menu__link").removeClass("orange");
     }
   });
 
