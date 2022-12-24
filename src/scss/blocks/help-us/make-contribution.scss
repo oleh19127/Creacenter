@@ -96,7 +96,10 @@
 
     .menu__arrow {
       margin-left: 10px !important;
-      margin-bottom: 1.5px;
+      margin-bottom: 1px;
+      @media screen and (max-width: 1399px) {
+        margin-bottom: 4px;
+      }
     }
 
     // .menu__sublist
