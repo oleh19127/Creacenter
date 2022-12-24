@@ -118,6 +118,9 @@
 
     .sublist-li {
       padding-top: 10px;
+      &:first-child {
+        margin-bottom: 0 !important;
+      }
     }
   }
 }
