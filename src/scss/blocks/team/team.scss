@@ -1,0 +1,119 @@
+.team {
+  margin: 80px 0px;
+  @media screen and (max-width: 991px) {
+    margin: 50px 0px;
+  }
+}
+
+.team-container-left,
+.team-container-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.team-container-left {
+  justify-content: start;
+}
+.team-container-right {
+  justify-content: end;
+}
+.team-block-left {
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 6px 10px #45454540;
+  margin-bottom: 40px;
+  max-width: 850px;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+  // .team-block-left__img
+
+  &__img {
+    max-width: 250px;
+    width: 100%;
+    max-height: 350px;
+    height: 100%;
+  }
+}
+.team-block-left-info {
+  margin-left: 40px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  // .team-block-left-info__name
+
+  &__name {
+    font-size: 30px;
+    color: #494949;
+    font-family: Montserrat-Bold;
+    margin-bottom: 25px;
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
+  // .team-block-left-info__description
+
+  &__description {
+    font-size: 24px;
+    color: #494949;
+    @media screen and (max-width: 767px) {
+      padding: 0px 15px 30px 15px;
+    }
+  }
+}
+.team-block-right {
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 6px 10px #45454540;
+  margin-bottom: 40px;
+  max-width: 850px;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+  // .team-block-right__img
+
+  &__img {
+    max-width: 250px;
+    width: 100%;
+    max-height: 350px;
+    height: 100%;
+    @media screen and (max-width: 767px) {
+      order: 1;
+    }
+  }
+}
+.team-block-right-info {
+  margin-left: 40px;
+  @media screen and (max-width: 767px) {
+    order: 2;
+    margin-left: 0;
+    text-align: center;
+  }
+  // .team-block-right-info__name
+
+  &__name {
+    font-size: 30px;
+    color: #494949;
+    font-family: Montserrat-Bold;
+    margin-bottom: 25px;
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
+  // .team-block-right-info__description
+
+  &__description {
+    font-size: 24px;
+    color: #494949;
+    @media screen and (max-width: 767px) {
+      padding: 0px 15px 30px 15px;
+    }
+  }
+}

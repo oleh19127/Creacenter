@@ -148,7 +148,9 @@ $(document).ready(function () {
   $("body").scroll(function () {
     if (
       $("body").scrollTop() >
-      $(".intro, .about-us-intro, .help-us-intro, .contact-intro").height()
+      $(
+        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro"
+      ).height()
     ) {
       $(".go-up").removeClass("none");
     } else {
