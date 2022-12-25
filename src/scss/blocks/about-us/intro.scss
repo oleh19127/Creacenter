@@ -1,6 +1,7 @@
 .about-us-intro {
-  padding-top: 143px;
-  @media screen and (max-width: 991px) {
+  position: relative;
+  padding-top: 142px;
+  @media screen and (max-width: 1399px) {
     padding-top: 80px;
   }
   // .about-us-intro__title
