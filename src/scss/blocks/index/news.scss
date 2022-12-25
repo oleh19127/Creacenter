@@ -49,6 +49,18 @@
         height: 40px;
       }
     }
+    @media screen and (max-width: 368px) {
+
+
+      &::before {
+        height: 40px;
+        bottom: 100px;
+      }
+      &::after {
+        height: 40px;
+        top: 107px;
+      }
+    }
   }
 }
 
