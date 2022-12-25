@@ -1,0 +1,23 @@
+.info {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.info-block {
+  color: $main-dark;
+  &:first-child {
+    margin-bottom: 50px;
+  }
+  // .info-block__title
+
+  &__title {
+    font-family: Montserrat-Bold;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  // .info-block__text
+
+  &__text {
+  }
+}
