@@ -31,4 +31,10 @@
       margin: 20px 10px;
     }
   }
+  // .help__link
+  &__link{
+    @media screen and (max-width: 771px) {
+      margin-top: 20px;
+    }
+  }
 }
