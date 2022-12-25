@@ -1,0 +1,22 @@
+.logos {
+  position: relative;
+  margin-bottom: 100px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 50px;
+  }
+}
+
+.logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // .logos-container__img
+
+  &__img {
+    height: 100%;
+    max-width: 648px;
+    &:nth-child(2) {
+      transform: scaleX(-1);
+    }
+  }
+}

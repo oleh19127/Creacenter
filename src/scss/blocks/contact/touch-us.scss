@@ -1,0 +1,30 @@
+.touch-us {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.touch-us-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // .touch-us-email__img
+
+  &__img {
+    margin-right: 34px;
+    height: 25px;
+    width: auto;
+  }
+
+  // .touch-us-email__text
+
+  &__text {
+    font-size: 16px;
+    color: $black;
+    a {
+      font-family: Montserrat-Bold;
+      color: $orange;
+    }
+  }
+}
