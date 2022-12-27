@@ -133,8 +133,11 @@
     font-family: Montserrat-Bold;
     color: $black;
     background: $orange;
+    transition: all 0.3s linear;
     &:hover {
       cursor: pointer;
+      background-color: $dark-brown;
+      color: $orange;
     }
   }
 }

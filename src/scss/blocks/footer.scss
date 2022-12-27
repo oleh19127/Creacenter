@@ -42,6 +42,8 @@
   // .footer__title
 
   &__title {
+    position: relative;
+    z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,16 +127,17 @@
 
     &:hover {
       border: 1px solid $orange;
-      transition: border 0.3s linear;
+      transition: border, color 0.3s linear;
+      color: $orange;
       span {
         color: $orange;
       }
     }
 
-    img {
-      height: 14px;
-      width: auto;
-    }
+    // img {
+    //   height: 14px;
+    //   width: auto;
+    // }
 
     span {
       color: $white;
@@ -162,8 +165,17 @@
     padding: 20px;
     background-color: $white;
     margin: 0px 5px;
+    // transition: background-color 0.3s linear;
+    &:hover {
+      // background-color: $orange;
+      img {
+        transition: transform 0.3s linear;
+        transform: scale(1.2);
+      }
+    }
 
     img {
+      transition: transform 0.3s linear;
       height: 20px;
       width: auto;
     }

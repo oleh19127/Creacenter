@@ -186,10 +186,8 @@ $(document).ready(function () {
   // INDEX SLIDER
   if ($(".intro-swiper")) {
     let indexSwiper = new Swiper(".intro-swiper", {
-      // loop: true,
-      lazy: true,
       autoplay: {
-        delay: 2500,
+        delay: 4500,
         disableOnInteraction: true,
       },
       keyboard: {
@@ -209,18 +207,9 @@ $(document).ready(function () {
   //OUR TEAM SLIDER
   if ($(".our-team-swiper")) {
     let OurTeamSwiper = new Swiper(".our-team-swiper", {
-      effect: "coverflow",
-      grabCursor: true,
       centeredSlides: true,
-      slidesPerView: 3,
+      // autoHeight: true,
       loop: true,
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: false,
-      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -228,6 +217,20 @@ $(document).ready(function () {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        // 1024: {
+        //   slidesPerView: 3,
+        //   spaceBetween: 50,
+        // },
       },
     });
   }

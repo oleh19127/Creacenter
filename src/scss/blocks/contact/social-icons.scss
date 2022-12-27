@@ -41,7 +41,14 @@
     padding: 20px;
     background-color: $orange;
     margin: 0px 5px;
+    &:hover {
+      img {
+        transition: transform 0.3s linear;
+        transform: scale(1.2);
+      }
+    }
     img {
+      transition: transform 0.3s linear;
       height: 20px;
       width: auto;
     }
