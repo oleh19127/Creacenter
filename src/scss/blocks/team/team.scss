@@ -3,6 +3,14 @@
   @media screen and (max-width: 991px) {
     margin: 50px 0px;
   }
+  .team-intro__logo {
+    &:last-child {
+      margin-top: 40px;
+      @media screen and (max-width: 991px) {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 .team-container-left,
