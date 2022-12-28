@@ -186,13 +186,9 @@ $(document).ready(function () {
   // INDEX SLIDER
   if ($(".intro-swiper")) {
     let indexSwiper = new Swiper(".intro-swiper", {
-      // grabCursor: true,
-      // keyboard: {
-      //   enabled: true,
-      // },
       autoplay: {
-        delay: 4500,
-        disableOnInteraction: true,
+        delay: 7000,
+        disableOnInteraction: false,
       },
       navigation: {
         nextEl: ".swiper-button-next",
@@ -207,14 +203,6 @@ $(document).ready(function () {
   //OUR TEAM SLIDER
   if ($(".our-team-swiper")) {
     let OurTeamSwiper = new Swiper(".our-team-swiper", {
-      // grabCursor: true,
-      // keyboard: {
-      //   enabled: true,
-      // },
-      // autoplay: {
-      //   delay: 4500,
-      //   disableOnInteraction: true,
-      // },
       centeredSlides: true,
       loop: true,
       effect: "coverflow",
