@@ -186,14 +186,14 @@ $(document).ready(function () {
   // INDEX SLIDER
   if ($(".intro-swiper")) {
     let indexSwiper = new Swiper(".intro-swiper", {
+      // grabCursor: true,
+      // keyboard: {
+      //   enabled: true,
+      // },
       autoplay: {
         delay: 4500,
         disableOnInteraction: true,
       },
-      keyboard: {
-        enabled: true,
-      },
-      // mousewheel: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -207,9 +207,24 @@ $(document).ready(function () {
   //OUR TEAM SLIDER
   if ($(".our-team-swiper")) {
     let OurTeamSwiper = new Swiper(".our-team-swiper", {
+      // grabCursor: true,
+      // keyboard: {
+      //   enabled: true,
+      // },
+      // autoplay: {
+      //   delay: 4500,
+      //   disableOnInteraction: true,
+      // },
       centeredSlides: true,
-      // autoHeight: true,
       loop: true,
+      effect: "coverflow",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 80,
+        depth: 250,
+        modifier: 1,
+        slideShadows: false,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -221,16 +236,10 @@ $(document).ready(function () {
       breakpoints: {
         640: {
           slidesPerView: 1,
-          spaceBetween: 20,
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 40,
         },
-        // 1024: {
-        //   slidesPerView: 3,
-        //   spaceBetween: 50,
-        // },
       },
     });
   }
@@ -267,7 +276,6 @@ function useDynamicAdapt(type = "max") {
 
   dMediaQueries.forEach((dMediaQuery) => {
     const matchMedia = window.matchMedia(dMediaQuery.query);
-    // массив объектов с подходящим брейкпоинтом
     const filteredDNodes = dNodes.filter(
       ({ breakpoint }) => breakpoint === dMediaQuery.breakpoint
     );
@@ -399,9 +407,9 @@ function useDynamicAdapt(type = "max") {
   }
 
   /**
-   * Функция сортировки массива по breakpoint и order
-   * по возрастанию для type = min
-   * по убыванию для type = max
+   *
+   *
+   *
    *
    * @param {dNode[]} items
    */
