@@ -23,7 +23,7 @@
   &__title {
     position: relative;
     display: inline;
-    font-family: Montserrat-Bold;
+    font-weight: 700;
     @include adaptiv-value("font-size", 70, 40, 0);
     color: $black;
     margin-left: 50px;
@@ -123,7 +123,7 @@
   // .books-block__title
 
   &__title {
-    font-family: Montserrat-Medium;
+    font-weight: 500;
     color: $black;
     margin: 20px 0px;
   }

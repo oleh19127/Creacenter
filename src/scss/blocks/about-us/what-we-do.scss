@@ -8,7 +8,7 @@
   &__title {
     padding: 15px 0px;
     background: $main-dark;
-    font-family: Montserrat-Medium;
+    font-weight: 500;
     @include adaptiv-value("font-size", 24, 20, 0);
     color: $white;
     text-align: center;
@@ -22,14 +22,15 @@
   &__title {
     @include adaptiv-value("font-size", 21, 18, 0);
     span {
-      font-family: Montserrat-Bold;
+      font-weight: 700;
     }
   }
 
   // .what-we-do-block__text
   &__text {
     position: relative;
-    font-family: Montserrat-Italic;
+    font-weight: 400;
+    font-style: italic;
     @include adaptiv-value("font-size", 18, 16, 0);
     margin-top: 120px;
     @media screen and (max-width: 991px) {

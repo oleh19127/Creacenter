@@ -19,6 +19,8 @@
     color: $main-dark;
     span {
       margin: 10px 0px;
+      font-weight: 700;
+
       @include adaptiv-value("font-size", 70, 41, 0);
       color: $main-light;
     }

@@ -4,10 +4,12 @@
 
   &__title {
     color: $black;
-    font-family: Montserrat-Bold;
     @include adaptiv-value("font-size", 50, 40, 0);
     margin-bottom: 50px;
     text-align: center;
+    h3 {
+      font-weight: 700;
+    }
   }
 
   // .our-partners__logo

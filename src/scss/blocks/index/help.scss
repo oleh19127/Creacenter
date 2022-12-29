@@ -21,9 +21,11 @@
   &__text {
     margin: 0px 10px;
     font-size: 33px;
-    font-family: Montserrat-Bold;
     color: $black;
     text-align: center;
+    h3 {
+      font-weight: 600;
+    }
     @media screen and (max-width: 1413px) {
       @include adaptiv-value("font-size", 30, 16, 0);
     }
@@ -32,7 +34,7 @@
     }
   }
   // .help__link
-  &__link{
+  &__link {
     @media screen and (max-width: 771px) {
       margin-top: 20px;
     }

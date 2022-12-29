@@ -28,7 +28,8 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: Montserrat-Regular;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   overflow-x: hidden;
 }
 
@@ -71,7 +72,6 @@ img {
 
 .main {
   position: relative;
-  
 }
 
 .go-up {

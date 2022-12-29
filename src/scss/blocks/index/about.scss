@@ -17,11 +17,13 @@
     background: $white;
     @include adaptiv-value("font-size", 70, 45, 0);
     color: $black;
-    font-family: Montserrat-Bold;
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
+    h2 {
+      font-weight: 700;
+    }
     @media screen and (max-width: 1308px) {
       padding: 25px 100px;
     }
@@ -69,7 +71,7 @@
       @include adaptiv-value("font-size", 35, 18, 0);
 
       span {
-        font-family: Montserrat-Bold;
+        font-weight: 700;
       }
 
       @media screen and (max-width: 991px) {
@@ -147,7 +149,7 @@
     p {
       padding: 0px 10px;
       text-transform: uppercase;
-      font-family: Montserrat-Bold;
+      font-weight: 700;
       @include adaptiv-value("font-size", 20, 16, 0);
       color: $white;
     }

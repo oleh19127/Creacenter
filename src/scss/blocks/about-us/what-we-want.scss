@@ -38,14 +38,14 @@
     background: $main-light;
     padding: 10px 15px;
     font-size: 22px;
-    font-family: Montserrat-Bold;
+    font-weight: 700;
   }
 
   // .what-we-want-block__title
 
   &__title {
     margin-bottom: 24px;
-    font-family: Montserrat-Bold;
+    font-weight: 700;
     @include adaptiv-value("font-size", 30, 20, 0);
   }
 

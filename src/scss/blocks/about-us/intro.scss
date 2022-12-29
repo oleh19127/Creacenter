@@ -14,7 +14,7 @@
     text-align: center;
 
     h1 {
-      font-family: Montserrat-Bold;
+      font-weight: 700;
       @include adaptiv-value("font-size", 70, 45, 0);
       color: $black;
     }
@@ -29,7 +29,7 @@
     color: $main-dark;
     margin-bottom: 40px;
     span {
-      font-family: Montserrat-Bold;
+      font-weight: 700;
     }
   }
 

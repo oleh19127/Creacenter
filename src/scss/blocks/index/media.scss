@@ -21,7 +21,7 @@
   &__title {
     position: relative;
     display: inline;
-    font-family: Montserrat-Bold;
+    font-weight: 700;
     @include adaptiv-value("font-size", 70, 45, 0);
     color: $white;
     margin-left: 50px;
@@ -95,7 +95,7 @@
 
       p {
         position: relative;
-        font-family: Montserrat-Bold;
+        font-weight: 700;
         @include adaptiv-value("font-size", 18, 16, 0);
         color: $white;
 
@@ -141,7 +141,7 @@
 
       p {
         position: relative;
-        font-family: Montserrat-Bold;
+        font-weight: 700;
         @include adaptiv-value("font-size", 18, 16, 0);
         color: $white;
         margin-top: 15px;

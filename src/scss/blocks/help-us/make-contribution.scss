@@ -13,7 +13,7 @@
       color: $main-dark;
     }
     span {
-      font-family: Montserrat-Bold;
+      font-weight: 700;
     }
   }
 }
@@ -117,7 +117,7 @@
     .menu__sublink {
       font-size: 17px;
       span {
-        font-family: Montserrat-Bold;
+        font-weight: 700;
       }
       &:hover {
         color: inherit;
@@ -151,7 +151,7 @@
   // .make-contribution-touch-us__button
 
   &__button {
-    font-family: Montserrat-Bold;
+    font-weight: 700;
     color: $main-dark;
     padding: 15px 30px;
     background-color: $main-light;
@@ -169,6 +169,7 @@
   &__subtitle {
     @include adaptiv-value("font-size", 40, 20, 0);
     color: $main-dark;
-    font-family: Montserrat-Italic;
+    font-weight: 400;
+    font-style: italic;
   }
 }

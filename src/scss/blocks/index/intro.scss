@@ -77,7 +77,7 @@
     &__text {
       padding: 0px 20px;
       @include adaptiv-value("font-size", 40, 20, 0);
-      font-family: Montserrat-Bold;
+      font-weight: 700;
       max-width: 800px;
     }
   }
