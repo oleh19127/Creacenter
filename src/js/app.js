@@ -149,7 +149,7 @@ $(document).ready(function () {
     if (
       $("body").scrollTop() >
       $(
-        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro"
+        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro"
       ).height()
     ) {
       $(".go-up").removeClass("none");
