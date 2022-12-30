@@ -1,0 +1,78 @@
+.for-example {
+  margin: 100px 0px;
+  @media screen and (max-width: 767px) {
+    margin: 50px 0px;
+  }
+}
+
+.for-example-container {
+  position: relative;
+  background: $orange;
+  box-shadow: 3px 6px 10px #45454540;
+  @media screen and (max-width: 991px) {
+    padding-bottom: 80px;
+    margin-bottom: 180px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 90px;
+  }
+  // .for-example-container__text
+
+  &__text {
+    padding: 50px;
+    @media screen and (max-width: 991px) {
+      text-align: center;
+      padding: 50px 25px;
+    }
+    // @media screen and (max-width: 767px) {
+    //   padding: 25px;
+    // }
+    h5 {
+      @include adaptiv-value("font-size", 25, 20, 0);
+      color: $black;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  // .for-example-container__img
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    right: -420px;
+    transform: translateY(-50%);
+    height: auto;
+    @media screen and (max-width: 1237px) {
+      max-width: 450px;
+      right: -372px;
+    }
+    @media screen and (max-width: 991px) {
+      top: 80%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 300px;
+      top: 78%;
+    }
+    @media screen and (max-width: 432px) {
+      top: 82%;
+    }
+  }
+}
+
+.for-example-description {
+  margin-top: 50px;
+
+  // .for-example-description__text
+
+  &__text {
+    color: $main-dark;
+    @include adaptiv-value("font-size", 25, 20, 0);
+    &:nth-child(1) {
+      margin-bottom: 30px;
+    }
+  }
+}
