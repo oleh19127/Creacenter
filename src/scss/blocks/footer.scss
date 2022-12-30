@@ -47,11 +47,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $dark-grey;
-    letter-spacing: 2px;
+    color: #808080;
+    letter-spacing: 13.25px;
     text-transform: uppercase;
-    font-weight: 500;
-    @include adaptiv-value("font-size", 60, 40, 0);
+    font-family: Fact-Light;
+    @include adaptiv-value("font-size", 60, 45, 0);
     @media screen and (max-width: 991px) {
       text-align: center;
     }
