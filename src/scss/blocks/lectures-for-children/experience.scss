@@ -1,0 +1,120 @@
+.experience {
+  // .experience__title
+
+  &__title {
+    text-align: center;
+    margin: 100px 0px 50px 0px;
+    @include adaptiv-value("font-size", 40, 35, 0);
+    color: $main-dark;
+    h2 {
+      font-weight: 700;
+    }
+  }
+
+  .col-12:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.experience-block {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 134px;
+  max-width: 800px;
+  box-shadow: 3px 6px 10px #45454540;
+  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    height: 100%;
+  }
+  &:nth-child(1) {
+    .experience-block__number {
+      background: #f7f4ff;
+      padding: 0px 17px;
+      @media screen and (max-width: 767px) {
+        padding: 17px 0px;
+      }
+    }
+  }
+  &:nth-child(2) {
+    .experience-block__number {
+      background: #ffefef;
+    }
+  }
+  &:nth-child(3) {
+    .experience-block__number {
+      background: #e0ffe9;
+    }
+  }
+  &:nth-child(4) {
+    .experience-block__number {
+      background: #eaf5ff;
+    }
+  }
+  &:nth-child(5) {
+    .experience-block__number {
+      background: #f7f4ff;
+    }
+  }
+  // .experience-block__number
+
+  &__number {
+    font-size: 22px;
+    color: $main-dark;
+    font-weight: 700;
+    padding: 0px 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      padding: 15px 0px;
+      justify-content: center;
+    }
+  }
+
+  // .experience-block__text
+
+  &__text {
+    margin-left: 45px;
+    font-size: 28px;
+    flex-grow: 1;
+    color: $main-dark;
+    font-weight: 700;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-left: 0;
+      flex-grow: 0;
+      padding: 0px 15px;
+      margin: 30px 0px;
+    }
+  }
+
+  // .experience-block__img
+
+  &__img {
+    margin-right: 40px;
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+}
+.experience-block-description {
+  margin-top: 20px;
+  // .experience-block-description__text
+
+  &__text {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    font-size: 25px;
+    color: $main-dark;
+    &:nth-child(1) {
+      margin-bottom: 30px;
+    }
+  }
+}

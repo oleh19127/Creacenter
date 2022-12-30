@@ -12,7 +12,7 @@
     text-align: center;
     h1 {
       font-weight: 700;
-      @include adaptiv-value("font-size", 70, 45, 0);
+      @include adaptiv-value("font-size", 80, 45, 0);
       color: $black;
     }
   }
