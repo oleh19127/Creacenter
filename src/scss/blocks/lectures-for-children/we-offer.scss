@@ -62,10 +62,15 @@
 
   &__text {
     margin-left: 45px;
-    font-size: 28px;
+    font-size: 26px;
     flex-grow: 1;
     color: $main-dark;
     font-weight: 700;
+    span {
+      font-size: 23px;
+      font-weight: 400;
+      font-style: italic;
+    }
     @media screen and (max-width: 767px) {
       text-align: center;
       margin-left: 0;
