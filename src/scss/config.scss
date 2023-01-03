@@ -124,6 +124,13 @@ img {
   visibility: hidden;
 }
 
+.default-margin {
+  margin: 100px 0 !important;
+  @media screen and (max-width: 767px) {
+    margin: 50px 0 !important;
+  }
+}
+
 // ADAPTIV-FONT
 $maxWidth: 1920;
 $maxWidthContainer: 1200;
