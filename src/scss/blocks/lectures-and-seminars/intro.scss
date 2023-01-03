@@ -52,9 +52,11 @@
 
   &__title {
     margin-bottom: 5px;
+    text-transform: uppercase;
+    padding: 0 10px;
     h2 {
       font-weight: 700;
-      @include adaptiv-value("font-size", 60, 40, 0);
+      @include adaptiv-value("font-size", 60, 30, 0);
       color: $white;
     }
   }
