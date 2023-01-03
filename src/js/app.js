@@ -149,7 +149,7 @@ $(document).ready(function () {
     if (
       $("body").scrollTop() >
       $(
-        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro"
+        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro"
       ).height()
     ) {
       $(".go-up").removeClass("none");
@@ -182,6 +182,21 @@ $(document).ready(function () {
     $(".menu__body").toggleClass("_active");
     $("body").toggleClass("_lock");
   });
+
+  if ($(".ibg")) {
+    function ibg() {
+      $.each($(".ibg"), function (index, val) {
+        if ($(this).find("img").length > 0) {
+          $(this).css(
+            "background-image",
+            'url("' + $(this).find("img").attr("src") + '")'
+          );
+        }
+      });
+    }
+
+    ibg();
+  }
 
   // INDEX SLIDER
   if ($(".intro-swiper")) {

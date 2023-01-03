@@ -1,0 +1,68 @@
+.seminars-intro {
+  position: relative;
+  padding-top: 142px;
+  @media screen and (max-width: 1399px) {
+    padding-top: 80px;
+  }
+
+  .seminars-intro__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  // .seminars-intro__title
+
+  &__title {
+    margin: 50px 0 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+    h1 {
+      font-weight: 700;
+      @include adaptiv-value("font-size", 64, 45, 0);
+      color: $black;
+    }
+  }
+
+  // .seminars-intro__text
+
+  &__text {
+    margin: 50px 0px;
+    @include adaptiv-value("font-size", 35, 18, 0);
+    color: $main-dark;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  // .seminars-intro__img
+
+  &__img {
+    max-width: 640px;
+    height: auto;
+  }
+}
+
+.seminars-intro-bg-block {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 70px 0 210px 0;
+  // .seminars-intro-bg-block__title
+
+  &__title {
+    margin-bottom: 5px;
+    h2 {
+      font-weight: 700;
+      @include adaptiv-value("font-size", 60, 40, 0);
+      color: $white;
+    }
+  }
+
+  // .seminars-intro-bg-block__subtitle
+
+  &__subtitle {
+    @include adaptiv-value("font-size", 35, 18, 0);
+    color: $white;
+  }
+}
