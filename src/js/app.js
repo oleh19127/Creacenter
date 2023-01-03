@@ -1,14 +1,6 @@
 /*
 USEFUL LINKS
 
-CDN.JS
-https://cdnjs.com/
-
-SLIDERS
-SWIPER(VANILLA JS) https://swiperjs.com/get-started
-OWL CAROUSEL 2 SLIDER(JQUERY) https://owlcarousel2.github.io/OwlCarousel2/
-FOTORAMA SLIDER(JQUERY) https://fotorama.io/#5264c896-cf01-4ad9-9216-114c20a388cc
-
 GALLERY
 LIGHT GALLERY(VANILLA JS) https://www.lightgalleryjs.com/
 FANCY BOX(JQUERY) https://fancyapps.com/fancybox/3/
@@ -145,9 +137,9 @@ $(document).ready(function () {
   });
 
   // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
-  $("body").scroll(function () {
+  $("html").scroll(function () {
     if (
-      $("body").scrollTop() >
+      $("html").scrollTop() >
       $(
         ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro"
       ).height()
@@ -246,6 +238,8 @@ $(document).ready(function () {
       },
     });
   }
+  // ANIMATE ON SCROLL
+  AOS.init();
 });
 
 /**
