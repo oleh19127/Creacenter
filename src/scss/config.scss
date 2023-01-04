@@ -22,6 +22,7 @@ $main-light: #fdac53;
 
 html,
 body {
+  position: relative;
   height: 100%;
   width: 100%;
   min-width: 320px;
@@ -34,7 +35,6 @@ body {
 
 body {
   font-size: 16px;
-  position: relative;
   background: $white;
   overflow-x: hidden;
   &::-webkit-scrollbar {
@@ -67,15 +67,17 @@ img {
 
 .wrapper {
   min-height: 100%;
+  position: relative;
 }
 
 .main {
   position: relative;
+  overflow-x: hidden;
 }
 
 .go-up {
   position: fixed;
-  right: 8px;
+  right: 0px;
   bottom: 0;
   padding: 20px;
   background-color: $main-dark;

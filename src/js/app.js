@@ -136,10 +136,14 @@ $(document).ready(function () {
     }
   });
 
+  // ANIMATE ON SCROLL
+  AOS.init();
+
   // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
-  $("html").scroll(function () {
+
+  $(window).scroll(function () {
     if (
-      $("html").scrollTop() >
+      $(this).scrollTop() >
       $(
         ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro"
       ).height()
@@ -152,7 +156,7 @@ $(document).ready(function () {
 
   // SCROLL TOP
   $(".go-up").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 600);
+    $("html").animate({ scrollTop: 0 }, 600);
     return false;
   });
 
@@ -238,8 +242,6 @@ $(document).ready(function () {
       },
     });
   }
-  // ANIMATE ON SCROLL
-  AOS.init();
 });
 
 /**
