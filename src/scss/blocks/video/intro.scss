@@ -1,0 +1,40 @@
+.video-intro {
+  position: relative;
+  padding-top: 142px;
+  @media screen and (max-width: 1399px) {
+    padding-top: 80px;
+  }
+  // .video-intro__title
+
+  &__title {
+    margin-top: 50px;
+    padding: 60px 0 200px 0;
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      @include adaptiv-value("font-size", 80, 45, 0);
+      color: $white;
+    }
+  }
+
+  // .video-intro__logo
+
+  &__logo {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+      height: auto;
+      max-width: 640px;
+    }
+  }
+}
+.container-fluid {
+}
+.row {
+}
+.col-12 {
+}
