@@ -108,7 +108,7 @@
         position: relative;
         font-weight: 700;
         @include adaptiv-value("font-size", 18, 16, 0);
-        color: $white;
+        color: $white !important;
 
         &::after {
           content: "";
@@ -118,7 +118,7 @@
           display: block;
           width: 2px;
           height: 100%;
-          background: $white;
+          background: $white !important;
           z-index: 99;
           @media screen and (max-width: 445px) {
             left: -7px;
@@ -169,7 +169,7 @@
         position: relative;
         font-weight: 700;
         @include adaptiv-value("font-size", 18, 16, 0);
-        color: $white;
+        color: $white !important;
         margin-top: 15px;
       }
     }

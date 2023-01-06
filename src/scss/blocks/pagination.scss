@@ -1,0 +1,41 @@
+.pagination {
+  margin: 50px 0px;
+}
+
+.pagination-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    font-size: 16px;
+    color: $main-dark;
+    font-weight: 700;
+    padding: 10px 15px;
+    border: 1px solid $main-dark;
+    margin: 0 10px;
+    &:first-child,
+    &:last-child {
+      background-color: $main-dark;
+      color: $orange;
+    }
+    &:first-child {
+      background-color: $main-dark;
+      color: $orange;
+      margin-right: 20px;
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+    &:nth-child(2) {
+      padding: 10px 16px;
+    }
+    &.active{
+      background-color: $main-dark;
+      color: $orange;
+    }
+  }
+}

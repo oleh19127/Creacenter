@@ -1,0 +1,13 @@
+.videos {
+  .media-block {
+    .media-block__description {
+      p {
+        font-weight: 500;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
