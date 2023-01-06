@@ -8,13 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   a {
     font-size: 16px;
     color: $main-dark;
     font-weight: 700;
     padding: 10px 15px;
     border: 1px solid $main-dark;
-    margin: 0 10px;
+    margin: 10px;
     &:first-child,
     &:last-child {
       background-color: $main-dark;
