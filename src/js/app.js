@@ -25,16 +25,36 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 $(document).ready(function () {
   $(".play-button").click(function () {
     $(this).addClass("none");
-    $(this)
+    const imgPlaceholder = $(this)
       .closest(".media-block__player")
-      .find(".youtube-placeholder")
-      .addClass("none");
+      .closest(".media-block-body")
+      .find(".media-block__content");
 
-    $(this).closest(".media-block__player").find("iframe")[0].src +=
-      "controlslist='nodownload'";
+    imgPlaceholder.addClass("none");
 
-    $(this).closest(".media-block__player").find("iframe")[0].src +=
-      "&autoplay=1";
+    const img = $(this)
+      .closest(".media-block__player")
+      .closest(".media-block-body")
+      .find(".media-block__content")
+      .find(".youtube-placeholder");
+
+    const imgSrc = $(img).attr("src");
+
+    const imgId = imgSrc.split("/")[4];
+
+    const mediaBlockBody = $(this)
+      .closest(".media-block__player")
+      .closest(".media-block-body")
+      .find(".media-block__player");
+
+    mediaBlockBody.append(`<iframe width="100%" height="100%"
+    src="https://www.youtube.com/embed/${imgId}?controls=1&autoplay=1"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    playsinline></iframe>`);
+
     ev.preventDefault();
   });
 
