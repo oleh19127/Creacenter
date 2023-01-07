@@ -1,0 +1,49 @@
+.all-books {
+  margin: 50px 0px;
+  .new-books-block {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .new-books-block__img {
+    margin: 0 0 20px 0;
+    // max-width: 100%;
+    // max-height: 200px;
+  }
+  .new-books-block-description__title {
+    font-size: 18px;
+  }
+  .new-books-block-description-annotation {
+    color: $main-dark;
+    margin-top: 20px;
+    .new-books-block-description-annotation__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      span {
+        font-weight: 300;
+        font-size: 16px;
+        margin-right: 15px;
+      }
+      img {
+        height: 16px;
+        width: auto;
+        transform: rotate(90deg);
+        transition: transform 0.3s linear;
+      }
+      &.active {
+        img {
+          transform: rotate(-90deg);
+        }
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .new-books-block-description-annotation__text {
+      padding-top: 14px;
+      font-size: 15px;
+      display: none;
+    }
+  }
+}

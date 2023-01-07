@@ -110,6 +110,15 @@ $(document).ready(function () {
     );
   }
 
+  // ANNOTATION
+  $(".new-books-block-description-annotation__toggle").click(function () {
+    $(this)
+      .closest(".new-books-block-description-annotation")
+      .find(".new-books-block-description-annotation__text")
+      .slideToggle("slow");
+    $(this).toggleClass("active");
+  });
+
   // ADDITION
   $(".make-contribution-additional__menu li .menu__link").click(function () {
     $(".make-contribution-additional__menu .menu__sublist").slideToggle("slow");
@@ -165,7 +174,7 @@ $(document).ready(function () {
     if (
       $(this).scrollTop() >
       $(
-        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro"
+        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro, .books-intro"
       ).height()
     ) {
       $(".go-up").removeClass("none");
