@@ -45,13 +45,26 @@
 }
 
 .seminars-intro-bg-block {
+  position: relative;
   text-align: center;
   width: 100%;
   height: 100%;
   padding: 70px 0 210px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent linear-gradient(0deg, #45454500 0%, #0e0e0e 100%);
+    width: 100%;
+    height: 60%;
+    z-index: 1;
+  }
   // .seminars-intro-bg-block__title
 
   &__title {
+    position: relative;
+    z-index: 2;
     margin-bottom: 5px;
     text-transform: uppercase;
     padding: 0 10px;
@@ -65,6 +78,8 @@
   // .seminars-intro-bg-block__subtitle
 
   &__subtitle {
+    position: relative;
+    z-index: 2;
     @include adaptiv-value("font-size", 35, 18, 0);
     color: $white;
   }

@@ -98,11 +98,23 @@
   &__main-image-container {
     position: relative;
     margin-bottom: 20px;
-
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: transparent
+        linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat
+        padding-box;
+      width: 100%;
+      height: 50%;
+      z-index: 1;
+    }
     .left-side-news__description {
       position: absolute;
       bottom: 33px;
       left: 39px;
+      z-index: 2;
       @media screen and (max-width: 458px) {
         left: 10px;
         bottom: 10px;

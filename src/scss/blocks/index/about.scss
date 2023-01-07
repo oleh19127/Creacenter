@@ -36,11 +36,25 @@
   }
 
   .about__body {
+    // position: relative;
     padding: 50px 0px;
     background-image: url("../../images/about/bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat !important;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   background: transparent
+    //     linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat
+    //     padding-box;
+    //   width: 100%;
+    //   height: 50%;
+    //   z-index: 1;
+    //   transform: rotate(270deg);
+    // }
   }
 
   // .about__logo
