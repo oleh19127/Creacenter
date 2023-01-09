@@ -12,6 +12,10 @@
       font-weight: 700;
     }
   }
+  .custome {
+    max-width: 205px;
+    width: 100%;
+  }
 }
 
 .new-books-block {
@@ -20,9 +24,6 @@
   // .new-books-block__img
 
   &__img {
-    max-width: 205px;
-    // max-height: 350px;
-    width: 100%;
     height: 100%;
     margin-right: 20px;
     @media screen and (max-width: 767px) {
@@ -57,13 +58,16 @@
   // .new-books-block-description__date
 
   &__date {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
   }
 
   // .new-books-block-description__info
 
   &__info {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+  }
+  &__authors {
+    margin-bottom: 10px;
   }
 
   // .new-books-block-description__more-info-link

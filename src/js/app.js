@@ -23,6 +23,97 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 */
 
 $(document).ready(function () {
+  if ($(".right-side-news__image-with-title-container")[0]) {
+    let newsTittleHeights = [];
+    let newsTextHeights = [];
+
+    const newsTittle = $(
+      ".left-side-news__main-images-with-title-container .right-side-news__image-with-title-container .left-side-news__description h3"
+    );
+
+    $.each(newsTittle, function (index, value) {
+      newsTittleHeights.push($(this).height());
+    });
+
+    const biggestHeightTittle = Math.max(...newsTittleHeights);
+
+    $.each(newsTittle, function (index, value) {
+      $(this).height(biggestHeightTittle);
+    });
+
+    const newsText = $(
+      ".left-side-news__main-images-with-title-container .right-side-news__image-with-title-container .left-side-news__description p"
+    );
+
+    $.each(newsText, function (index, value) {
+      newsTextHeights.push($(this).height());
+    });
+
+    const biggestHeightText = Math.max(...newsTextHeights);
+
+    $.each(newsText, function (index, value) {
+      $(this).height(biggestHeightText);
+    });
+  }
+
+  if ($(".all-books .new-books-block")[0]) {
+    let booksTittleHeights = [];
+    let booksDateHeights = [];
+    let booksInfoHeights = [];
+    let booksInfoDescription = [];
+    let booksInfoAuthors = [];
+
+    const booksTittle = $(
+      ".all-books .new-books-block-description .new-books-block-description__title"
+    );
+
+    $.each(booksTittle, function (index, value) {
+      booksTittleHeights.push($(this).height());
+    });
+
+    const biggestHeightTittle = Math.max(...booksTittleHeights);
+
+    $.each(booksTittle, function (index, value) {
+      $(this).height(biggestHeightTittle + 10);
+    });
+
+    const booksDate = $(".all-books .new-books-block-description__date");
+
+    $.each(booksDate, function (index, value) {
+      booksDateHeights.push($(this).height());
+    });
+
+    const biggestHeightDate = Math.max(...booksDateHeights);
+
+    $.each(booksDate, function (index, value) {
+      $(this).height(biggestHeightDate + 10);
+    });
+
+    const booksInfo = $(".all-books .new-books-block-description__info");
+
+    $.each(booksInfo, function (index, value) {
+      booksInfoHeights.push($(this).height());
+    });
+
+    const biggestHeightInfo = Math.max(...booksInfoHeights);
+
+    $.each(booksInfo, function (index, value) {
+      $(this).height(biggestHeightInfo + 10);
+    });
+
+    const booksAuthors = $(".all-books .new-books-block-description__authors");
+
+    $.each(booksAuthors, function (index, value) {
+      booksInfoAuthors.push($(this).height());
+    });
+
+    const biggestHeightAuthors = Math.max(...booksInfoAuthors);
+
+    $.each(booksAuthors, function (index, value) {
+      $(this).height(biggestHeightAuthors + 10);
+    });
+  }
+
   $(".play-button").click(function () {
     $(this).addClass("none");
     const imgPlaceholder = $(this)
