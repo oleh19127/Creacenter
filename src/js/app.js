@@ -174,7 +174,7 @@ $(document).ready(function () {
     if (
       $(this).scrollTop() >
       $(
-        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro, .books-intro"
+        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro, .books-intro, .museum-intro"
       ).height()
     ) {
       $(".go-up").removeClass("none");

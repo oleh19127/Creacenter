@@ -1,0 +1,29 @@
+.museum-stands {
+  // .museum-stands__title
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+    h2 {
+      color: $main-dark;
+      font-weight: 700;
+      @include adaptiv-value("font-size", 40, 30, 0);
+    }
+  }
+
+  // .museum-stands__description
+
+  &__description {
+    p {
+      color: $main-dark;
+      @include adaptiv-value("font-size", 25, 20, 0);
+      margin-bottom: 30px;
+    }
+  }
+  .our-team-swiper {
+    padding: 70px 0 100px 0px;
+    @media screen and (max-width: 991px) {
+      padding: 50px 0;
+    }
+  }
+}

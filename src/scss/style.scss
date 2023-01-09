@@ -3,6 +3,9 @@
 
 @import "blocks/preloader";
 @import "blocks/header";
+@import "blocks/footer";
+@import "blocks/pagination.scss";
+
 @import "blocks/index/intro";
 @import "blocks/index/news";
 @import "blocks/index/about";
@@ -11,7 +14,7 @@
 @import "blocks/index/subscribe";
 @import "blocks/index/creationists";
 @import "blocks/index/books";
-@import "blocks/footer";
+@import "blocks/contact-us.scss";
 
 @import "blocks/about-us/intro.scss";
 @import "blocks/about-us/what-we-want";
@@ -38,8 +41,6 @@
 @import "blocks/lectures-for-children/we-offer.scss";
 @import "blocks/lectures-for-children/for-example.scss";
 
-@import "blocks/contact-us.scss";
-
 @import "blocks/lectures-and-seminars/intro.scss";
 @import "blocks/lectures-and-seminars/what-we-do.scss";
 
@@ -47,8 +48,11 @@
 @import "blocks/video/new-video.scss";
 @import "blocks/video/videos.scss";
 
-@import "blocks/pagination.scss";
-
 @import "blocks/books/intro.scss";
 @import "blocks/books/new-books.scss";
 @import "blocks/books/all-books.scss";
+
+@import "blocks/museum/intro.scss";
+@import "blocks/museum/description-museum-collection.scss";
+@import "blocks/museum/large-exhibits.scss";
+@import "blocks/museum/museum-stands.scss";

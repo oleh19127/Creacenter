@@ -1,0 +1,37 @@
+.description-museum-collection {
+  margin: 100px 0;
+  @media screen and (max-width: 991px) {
+    margin: 50px 0px;
+  }
+
+  // .description-museum-collection__img
+
+  &__img {
+    margin-bottom: 100px;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  // .description-museum-collection__title
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+    h2 {
+      color: $main-dark;
+      font-weight: 700;
+      @include adaptiv-value("font-size", 40, 30, 0);
+    }
+  }
+
+  // .description-museum-collection__description
+
+  &__description {
+    p {
+      color: $main-dark;
+      @include adaptiv-value("font-size", 25, 20, 0);
+      margin-bottom: 30px;
+    }
+  }
+}
