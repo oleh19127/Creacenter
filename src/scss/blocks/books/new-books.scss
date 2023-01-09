@@ -1,6 +1,10 @@
 .new-books {
   background: $orange;
   padding: 50px 0px;
+  margin: 100px 0px 50px 0px;
+  @media screen and (max-width: 767px) {
+    margin: 50px 0px;
+  }
   // .new-books__title
 
   &__title {
