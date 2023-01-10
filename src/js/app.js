@@ -23,6 +23,7 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 */
 
 $(document).ready(function () {
+  // INTRO NEWS SECTION
   if ($(".right-side-news__image-with-title-container")[0]) {
     let newsTittleHeights = [];
     let newsTextHeights = [];
@@ -56,6 +57,43 @@ $(document).ready(function () {
     });
   }
 
+  // ARTICLES
+  if ($(".search-results")) {
+    let newsTittleHeights = [];
+    let newsTextHeights = [];
+
+    const newsTittle = $(
+      ".search-results .search-results-block-description__title h3"
+    );
+
+    $.each(newsTittle, function (index, value) {
+      newsTittleHeights.push($(this).height());
+    });
+
+    const biggestHeightTittle = Math.max(...newsTittleHeights);
+
+    $.each(newsTittle, function (index, value) {
+      $(this).height(biggestHeightTittle);
+    });
+
+    const newsText = $(
+      ".search-results .search-results-block-description-info__text"
+    );
+
+    $.each(newsText, function (index, value) {
+      newsTextHeights.push($(this).height());
+    });
+
+    const biggestHeightText = Math.max(...newsTextHeights);
+
+    $.each(newsText, function (index, value) {
+      $(this).height(biggestHeightText);
+      $(this).css("margin-top", 12);
+      $(this).css("margin-bottom", 10);
+    });
+  }
+
+  // BOOKS PAGE
   if ($(".all-books .new-books-block")[0]) {
     let booksTittleHeights = [];
     let booksDateHeights = [];
@@ -114,6 +152,7 @@ $(document).ready(function () {
     });
   }
 
+  // VIDEO SECTION
   $(".play-button").click(function () {
     $(this).addClass("none");
     const imgPlaceholder = $(this)
@@ -299,6 +338,7 @@ $(document).ready(function () {
     $("body").toggleClass("_lock");
   });
 
+  // IBG METHOD
   if ($(".ibg")) {
     function ibg() {
       $.each($(".ibg"), function (index, val) {

@@ -1,0 +1,42 @@
+.search {
+  margin-bottom: 50px;
+}
+
+.search-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-block-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    max-width: 800px;
+    width: 100%;
+    height: 1px;
+    background: $main;
+  }
+  // .search-block-container__input
+
+  &__input {
+    color: $main;
+    font-size: 20px;
+    font-style: italic;
+    width: 100%;
+  }
+
+  // .search-block-container__img
+
+  &__img {
+    height: 22px;
+    width: auto;
+  }
+}
