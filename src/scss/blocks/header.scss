@@ -165,7 +165,9 @@
         &::before {
           transition: background-color 1s linear;
           background-color: $white;
+          visibility: visible;
         }
+
       }
 
       &::before {
@@ -176,6 +178,7 @@
         left: 0;
         background: transparent;
         z-index: 9999;
+        visibility: hidden;
         @media screen and (max-width: 1399px) {
           height: 80px;
         }

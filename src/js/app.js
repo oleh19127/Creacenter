@@ -402,7 +402,7 @@ $(document).ready(function () {
         640: {
           slidesPerView: 1,
         },
-        768: {
+        991: {
           slidesPerView: 2,
         },
       },
