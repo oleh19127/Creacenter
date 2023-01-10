@@ -28,128 +28,134 @@ $(document).ready(function () {
     let newsTittleHeights = [];
     let newsTextHeights = [];
 
-    const newsTittle = $(
-      ".left-side-news__main-images-with-title-container .right-side-news__image-with-title-container .left-side-news__description h3"
-    );
+    setTimeout(() => {
+      const newsTittle = $(
+        ".left-side-news__main-images-with-title-container .right-side-news__image-with-title-container .left-side-news__description h3"
+      );
 
-    $.each(newsTittle, function (index, value) {
-      newsTittleHeights.push($(this).height());
-    });
+      $.each(newsTittle, function (index, value) {
+        newsTittleHeights.push($(this).height());
+      });
 
-    const biggestHeightTittle = Math.max(...newsTittleHeights);
+      const biggestHeightTittle = Math.max(...newsTittleHeights);
 
-    $.each(newsTittle, function (index, value) {
-      $(this).height(biggestHeightTittle);
-    });
+      $.each(newsTittle, function (index, value) {
+        $(this).height(biggestHeightTittle);
+      });
 
-    const newsText = $(
-      ".left-side-news__main-images-with-title-container .right-side-news__image-with-title-container .left-side-news__description p"
-    );
+      const newsText = $(
+        ".left-side-news__main-images-with-title-container .right-side-news__image-with-title-container .left-side-news__description p"
+      );
 
-    $.each(newsText, function (index, value) {
-      newsTextHeights.push($(this).height());
-    });
+      $.each(newsText, function (index, value) {
+        newsTextHeights.push($(this).height());
+      });
 
-    const biggestHeightText = Math.max(...newsTextHeights);
+      const biggestHeightText = Math.max(...newsTextHeights);
 
-    $.each(newsText, function (index, value) {
-      $(this).height(biggestHeightText);
-    });
+      $.each(newsText, function (index, value) {
+        $(this).height(biggestHeightText);
+      });
+    }, 50);
   }
 
   // ARTICLES
   if ($(".search-results")) {
     let newsTittleHeights = [];
     let newsTextHeights = [];
+    setTimeout(() => {
+      const newsTittle = $(
+        ".search-results .search-results-block-description__title h3"
+      );
 
-    const newsTittle = $(
-      ".search-results .search-results-block-description__title h3"
-    );
+      $.each(newsTittle, function (index, value) {
+        newsTittleHeights.push($(this).height());
+      });
 
-    $.each(newsTittle, function (index, value) {
-      newsTittleHeights.push($(this).height());
-    });
+      const biggestHeightTittle = Math.max(...newsTittleHeights);
 
-    const biggestHeightTittle = Math.max(...newsTittleHeights);
+      $.each(newsTittle, function (index, value) {
+        $(this).height(biggestHeightTittle);
+      });
 
-    $.each(newsTittle, function (index, value) {
-      $(this).height(biggestHeightTittle);
-    });
+      const newsText = $(
+        ".search-results .search-results-block-description-info__text"
+      );
 
-    const newsText = $(
-      ".search-results .search-results-block-description-info__text"
-    );
+      $.each(newsText, function (index, value) {
+        newsTextHeights.push($(this).height());
+      });
 
-    $.each(newsText, function (index, value) {
-      newsTextHeights.push($(this).height());
-    });
+      const biggestHeightText = Math.max(...newsTextHeights);
 
-    const biggestHeightText = Math.max(...newsTextHeights);
-
-    $.each(newsText, function (index, value) {
-      $(this).height(biggestHeightText);
-      $(this).css("margin-top", 12);
-      $(this).css("margin-bottom", 10);
-    });
+      $.each(newsText, function (index, value) {
+        $(this).height(biggestHeightText);
+        $(this).css("margin-bottom", 10);
+        $(this).css("margin-top", 10);
+      });
+    }, 50);
   }
 
   // BOOKS PAGE
-  if ($(".all-books .new-books-block")[0]) {
+  if ($(".all-books .new-books-block")) {
     let booksTittleHeights = [];
     let booksDateHeights = [];
     let booksInfoHeights = [];
-    let booksInfoDescription = [];
     let booksInfoAuthors = [];
 
-    const booksTittle = $(
-      ".all-books .new-books-block-description .new-books-block-description__title"
-    );
+    setInterval(() => {
+      const booksTittle = $(
+        ".all-books .new-books-block-description .new-books-block-description__title"
+      );
 
-    $.each(booksTittle, function (index, value) {
-      booksTittleHeights.push($(this).height());
-    });
+      $.each(booksTittle, function (index, value) {
+        booksTittleHeights.push($(this).height());
+      });
 
-    const biggestHeightTittle = Math.max(...booksTittleHeights);
+      const biggestHeightTittle = Math.max(...booksTittleHeights);
 
-    $.each(booksTittle, function (index, value) {
-      $(this).height(biggestHeightTittle + 10);
-    });
+      $.each(booksTittle, function (index, value) {
+        $(this).height(biggestHeightTittle);
+      });
 
-    const booksDate = $(".all-books .new-books-block-description__date");
+      const booksDate = $(".all-books .new-books-block-description__date");
 
-    $.each(booksDate, function (index, value) {
-      booksDateHeights.push($(this).height());
-    });
+      $.each(booksDate, function (index, value) {
+        booksDateHeights.push($(this).height());
+      });
 
-    const biggestHeightDate = Math.max(...booksDateHeights);
+      const biggestHeightDate = Math.max(...booksDateHeights);
 
-    $.each(booksDate, function (index, value) {
-      $(this).height(biggestHeightDate + 10);
-    });
+      $.each(booksDate, function (index, value) {
+        $(this).height(biggestHeightDate);
+      });
 
-    const booksInfo = $(".all-books .new-books-block-description__info");
+      const booksInfo = $(".all-books .new-books-block-description__info");
 
-    $.each(booksInfo, function (index, value) {
-      booksInfoHeights.push($(this).height());
-    });
+      $.each(booksInfo, function (index, value) {
+        booksInfoHeights.push($(this).height());
+      });
 
-    const biggestHeightInfo = Math.max(...booksInfoHeights);
+      const biggestHeightInfo = Math.max(...booksInfoHeights);
 
-    $.each(booksInfo, function (index, value) {
-      $(this).height(biggestHeightInfo + 10);
-    });
+      $.each(booksInfo, function (index, value) {
+        $(this).height(biggestHeightInfo);
+      });
 
-    const booksAuthors = $(".all-books .new-books-block-description__authors");
+      const booksAuthors = $(
+        ".all-books .new-books-block-description__authors"
+      );
 
-    $.each(booksAuthors, function (index, value) {
-      booksInfoAuthors.push($(this).height());
-    });
+      $.each(booksAuthors, function (index, value) {
+        booksInfoAuthors.push($(this).height());
+      });
 
-    const biggestHeightAuthors = Math.max(...booksInfoAuthors);
+      const biggestHeightAuthors = Math.max(...booksInfoAuthors);
 
-    $.each(booksAuthors, function (index, value) {
-      $(this).height(biggestHeightAuthors + 10);
-    });
+      $.each(booksAuthors, function (index, value) {
+        $(this).height(biggestHeightAuthors);
+      });
+    }, 50);
   }
 
   // VIDEO SECTION
