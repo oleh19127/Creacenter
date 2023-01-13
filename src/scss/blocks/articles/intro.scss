@@ -1,0 +1,50 @@
+.articles-intro {
+  position: relative;
+  padding-top: 142px;
+  @media screen and (max-width: 1399px) {
+    padding-top: 80px;
+  }
+  // .articles-intro__title
+
+  &__title {
+    position: relative;
+    margin-top: 50px;
+    padding: 60px 0 200px 0;
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent linear-gradient(0deg, #45454500 0%, #0e0e0e 100%);
+      width: 100%;
+      height: 60%;
+      z-index: 1;
+    }
+    h1 {
+      position: relative;
+      z-index: 2;
+      text-transform: uppercase;
+      font-weight: 700;
+      @include adaptiv-value("font-size", 80, 45, 0);
+      color: $white;
+    }
+  }
+
+  // .articles-intro__logo
+
+  &__logo {
+    margin: 50px 0px 100px 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 991px) {
+      margin: 50px 0;
+    }
+    img {
+      height: auto;
+      max-width: 640px;
+    }
+  }
+}

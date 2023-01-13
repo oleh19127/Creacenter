@@ -11,7 +11,7 @@
 @import "blocks/index/about";
 @import "blocks/index/help";
 @import "blocks/index/media";
-@import "blocks/index/subscribe";
+@import "blocks/subscribe";
 @import "blocks/index/creationists";
 @import "blocks/index/books";
 @import "blocks/contact-us.scss";
@@ -60,3 +60,6 @@
 @import "blocks/search-results/intro.scss";
 @import "blocks/search-results/input.scss";
 @import "blocks/search-results/search-results.scss";
+
+@import "blocks/articles/intro.scss";
+@import "blocks/articles/articles.scss";

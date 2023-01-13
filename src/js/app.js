@@ -246,6 +246,16 @@ $(document).ready(function () {
     );
   }
 
+  //ARTICLES SLIDE TOGGLE
+
+  $(".articles-block-text__subtitle").click(function () {
+    $(this).toggleClass("active");
+    $(this)
+      .closest(".articles-block")
+      .find(".articles-block-list")
+      .slideToggle("slow");
+  });
+
   // ANNOTATION
   $(".new-books-block-description-annotation__toggle").click(function () {
     $(this)

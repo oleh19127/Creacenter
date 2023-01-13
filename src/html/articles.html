@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Search results
+title: Articles
 ---
 
 <main class="main">
-  <section class="search-intro">
+  <section class="articles-intro">
     <div class="container-fluid">
       <div class="row">
-        <div class="search-intro__title ibg">
-          <h1>ПОШУК</h1>
-          <img src="@img/search-results/bg-intro.png" alt="" />
+        <div class="articles-intro__title ibg">
+          <h1>СТАТТІ</h1>
+          <img src="@img/articles/bg-intro.png" alt="" />
         </div>
-        <div class="search-intro__logo">
+        <div class="articles-intro__logo">
           <img src="@img/about/logo.png" alt="logo" />
         </div>
       </div>
@@ -20,12 +20,49 @@ title: Search results
 
   {{> search}}
 
+  <section class="articles">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <div class="articles__block articles-block">
+            <div class="articles-block__body">
+              <div class="articles-block__number">1</div>
+              <div class="articles-block__text articles-block-text ibg">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAABkCAYAAABwx8J9AAAAAXNSR0IArs4c6QAABE1JREFUeF7t1YEJACAMA8F2/6EV3MLnnMBcCtmZOeMRIECAAAECXwusQf+6P58nQIAAAQJPwKA7BAIECBAgEBAw6IESRSBAgAABAgbdDRAgQIAAgYCAQQ+UKAIBAgQIEDDoboAAAQIECAQEDHqgRBEIECBAgIBBdwMECBAgQCAgYNADJYpAgAABAgQMuhsgQIAAAQIBAYMeKFEEAgQIECBg0N0AAQIECBAICBj0QIkiECBAgAABg+4GCBAgQIBAQMCgB0oUgQABAgQIGHQ3QIAAAQIEAgIGPVCiCAQIECBAwKC7AQIECBAgEBAw6IESRSBAgAABAgbdDRAgQIAAgYCAQQ+UKAIBAgQIEDDoboAAAQIECAQEDHqgRBEIECBAgIBBdwMECBAgQCAgYNADJYpAgAABAgQMuhsgQIAAAQIBAYMeKFEEAgQIECBg0N0AAQIECBAICBj0QIkiECBAgAABg+4GCBAgQIBAQMCgB0oUgQABAgQIGHQ3QIAAAQIEAgIGPVCiCAQIECBAwKC7AQIECBAgEBAw6IESRSBAgAABAgbdDRAgQIAAgYCAQQ+UKAIBAgQIEDDoboAAAQIECAQEDHqgRBEIECBAgIBBdwMECBAgQCAgYNADJYpAgAABAgQMuhsgQIAAAQIBAYMeKFEEAgQIECBg0N0AAQIECBAICBj0QIkiECBAgAABg+4GCBAgQIBAQMCgB0oUgQABAgQIGHQ3QIAAAQIEAgIGPVCiCAQIECBAwKC7AQIECBAgEBAw6IESRSBAgAABAgbdDRAgQIAAgYCAQQ+UKAIBAgQIEDDoboAAAQIECAQEDHqgRBEIECBAgIBBdwMECBAgQCAgYNADJYpAgAABAgQMuhsgQIAAAQIBAYMeKFEEAgQIECBg0N0AAQIECBAICBj0QIkiECBAgAABg+4GCBAgQIBAQMCgB0oUgQABAgQIGHQ3QIAAAQIEAgIGPVCiCAQIECBAwKC7AQIECBAgEBAw6IESRSBAgAABAgbdDRAgQIAAgYCAQQ+UKAIBAgQIEDDoboAAAQIECAQEDHqgRBEIECBAgIBBdwMECBAgQCAgYNADJYpAgAABAgQMuhsgQIAAAQIBAYMeKFEEAgQIECBg0N0AAQIECBAICBj0QIkiECBAgAABg+4GCBAgQIBAQMCgB0oUgQABAgQIGHQ3QIAAAQIEAgIGPVCiCAQIECBAwKC7AQIECBAgEBAw6IESRSBAgAABAgbdDRAgQIAAgYCAQQ+UKAIBAgQIEDDoboAAAQIECAQEDHqgRBEIECBAgIBBdwMECBAgQCAgYNADJYpAgAABAgQMuhsgQIAAAQIBAYMeKFEEAgQIECBg0N0AAQIECBAICBj0QIkiECBAgAABg+4GCBAgQIBAQMCgB0oUgQABAgQIGHQ3QIAAAQIEAgIGPVCiCAQIECBAwKC7AQIECBAgEBAw6IESRSBAgAABAhdiqWQBKZ6DTAAAAABJRU5ErkJggg=="
+                  alt="articles-bg" />
+                <h4 class="articles-block-text__title">Антропологія</h4>
+                <div class="articles-block-text__subtitle">розгорнути</div>
+              </div>
+            </div>
+            <ul class="articles-block__list articles-block-list">
+              <li class="articles-block-list__li">
+                <a href="#" class="articles-block-list__link">Астрономія</a>
+              </li>
+              <li class="articles-block-list__li">
+                <a href="#" class="articles-block-list__link">Великий вибух</a>
+              </li>
+              <li class="articles-block-list__li">
+                <a href="#" class="articles-block-list__link"
+                  >Зіркове світло та час</a
+                >
+              </li>
+              <li class="articles-block-list__li">
+                <a href="#" class="articles-block-list__link">Космологія</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="search-results">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="search-results__title">
-            <h2>Результати пошуку за запитом: <span>Великий вибух</span></h2>
+            <h2>Всі Статті</h2>
           </div>
         </div>
 
@@ -323,5 +360,5 @@ title: Search results
     </div>
   </section>
 
-  {{> pagination}}
+  {{> pagination}} {{> subscribe}}
 </main>

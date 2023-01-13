@@ -1,0 +1,128 @@
+.subscribe {
+  position: relative;
+  padding-bottom: 100px;
+  @media screen and (max-width: 991px) {
+    padding-bottom: 50px;
+  }
+}
+
+.subscribe-container {
+  position: relative;
+  border: 5px solid $main;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  h4 {
+    font-weight: 700;
+    @include adaptiv-value("font-size", 20, 17, 0);
+    text-transform: uppercase;
+    margin: 0px 10px 0px 30px;
+    @media screen and (max-width: 991px) {
+      margin: 40px 0px;
+    }
+    @media screen and (max-width: 767px) {
+      margin: 20px 0px;
+    }
+  }
+
+  h5 {
+    margin-right: 10px;
+    font-weight: 600;
+    @include adaptiv-value("font-size", 20, 17, 0);
+    @media screen and (max-width: 991px) {
+      margin: 0px 0px 30px 0px;
+    }
+    @media screen and (max-width: 767px) {
+      margin: 0px 0px 20px 0px;
+    }
+  }
+
+  .subscribe-container__input {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1199px) {
+      margin: 0px 0px 0px 10px;
+    }
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      margin: 0px;
+    }
+  }
+
+  .subscribe-container__submit {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+
+  input {
+    border: 1px solid $dark-brown;
+    padding: 20px;
+    border-radius: 4px;
+    min-width: 270px;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background-color: $main;
+    border-radius: 4px;
+    padding: 20px 40px 20px 20px;
+    color: $white;
+    text-transform: uppercase;
+    margin: 0px 40px 0px 10px;
+    transition: background-color 0.3s linear;
+    span {
+      font-weight: 700;
+    }
+    @media screen and (max-width: 991px) {
+      margin: 10px 10px 40px 0px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $brown;
+      transition: background-color 0.3s linear;
+    }
+
+    img {
+      margin-right: 15px;
+      height: 15px;
+      width: auto;
+    }
+  }
+
+  // .subscribe-container__img
+
+  &__img {
+    background: $main;
+    padding: 40px;
+    @media screen and (max-width: 991px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    @media screen and (max-width: 767px) {
+      position: relative;
+      padding: 25px;
+    }
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
