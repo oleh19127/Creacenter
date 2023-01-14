@@ -1,0 +1,29 @@
+.articles-details-text {
+  margin-bottom: 30px;
+  p {
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      &:nth-child(1) {
+        font-style: italic;
+      }
+      &:nth-child(2) {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: $orange;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__date {
+    font-size: 15px;
+    font-style: italic;
+    color: $black;
+  }
+}
