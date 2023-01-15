@@ -320,7 +320,7 @@ $(document).ready(function () {
     if (
       $(this).scrollTop() >
       $(
-        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro, .books-intro, .museum-intro"
+        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro, .books-intro, .museum-intro, .articles-intro"
       ).height()
     ) {
       $(".go-up").removeClass("none");
