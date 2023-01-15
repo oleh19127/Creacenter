@@ -126,6 +126,11 @@
     img {
       height: 19px;
       width: auto;
+      transition: transform 0.3s linear;
+      &:hover {
+        transition: transform 0.3s linear;
+        transform: scale(1.2);
+      }
     }
     &:last-child {
       margin-right: 0;

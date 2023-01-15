@@ -14,6 +14,12 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 
   // .articles-block__number
 
@@ -26,6 +32,9 @@
     padding: 10px;
     background: $orange;
     height: 100%;
+    &.first {
+      padding: 10px 13px;
+    }
   }
 }
 
