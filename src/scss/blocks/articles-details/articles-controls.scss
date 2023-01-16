@@ -71,6 +71,9 @@
     padding: 13px 16px;
     background: $main-dark;
     margin-left: 35px;
+    img {
+      transform: scaleX(-1);
+    }
   }
 
   // .articles-controls-next-block__title
