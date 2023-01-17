@@ -194,6 +194,58 @@ $(document).ready(function () {
     ev.preventDefault();
   });
 
+  //ARTICLES SLIDE TOGGLE
+
+  $(".articles-block-text__subtitle").click(function () {
+    $(this).find(".articles-block-text-subtitle__arrow").toggleClass("active");
+    $(this)
+      .closest(".articles-block")
+      .find(".articles-block-list")
+      .slideToggle("slow");
+  });
+
+  // ANNOTATION
+  $(".new-books-block-description-annotation__toggle").click(function () {
+    $(this)
+      .closest(".new-books-block-description-annotation")
+      .find(".new-books-block-description-annotation__text")
+      .slideToggle("slow");
+    $(this).toggleClass("active");
+  });
+
+  // ADDITION
+  $(".make-contribution-additional-menu-title").click(function () {
+    $(this).toggleClass("orange");
+    $(this)
+      .find(".make-contribution-additional-menu-title__arrow")
+      .toggleClass("active");
+
+    $(this)
+      .closest(".make-contribution-additional-menu")
+      .find(".make-contribution-additional-menu-sublist")
+      .slideToggle("slow");
+  });
+
+  // BODY LISTENER
+  $(document).on("click", "body", function (e) {
+    if (
+      !$(e.target).is("li .menu__link") &&
+      !$(e.target).is("li .menu__sublink") &&
+      !$(e.target).is("li .menu__sublink span") &&
+      !$(e.target).is("li .sublist-li") &&
+      !$(e.target).is("li .menu__sublist") &&
+      !$(e.target).is(".menu__arrow")
+    ) {
+      $(".language li .menu__arrow").removeClass("_active");
+      $(".language li .menu__sublist").slideUp("slow");
+      $(".language li .menu__link").removeClass("orange");
+
+      $(".menu__list li .menu__arrow").removeClass("_active");
+      $(".menu__list li .menu__sublist").slideUp("slow");
+      $(".menu__list li .menu__link").removeClass("orange");
+    }
+  });
+
   // MENU
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -204,28 +256,12 @@ $(document).ready(function () {
       $(".menu__list li .menu__sublist").slideUp("slow");
       $(".menu__list li .menu__link").removeClass("orange");
       $(".menu__list li .menu__arrow").removeClass("_active");
-
-      $(".make-contribution-additional__menu .menu__sublist").slideUp("slow");
-      $(".make-contribution-additional__menu li .menu__link").removeClass(
-        "orange"
-      );
-      $(".make-contribution-additional__menu li .menu__arrow").removeClass(
-        "_active"
-      );
     });
 
     $(".menu__list li").click(function () {
       $(".language li .menu__sublist").slideUp("slow");
       $(".language li .menu__link").removeClass("orange");
       $(".language li .menu__arrow").removeClass("_active");
-
-      $(".make-contribution-additional__menu .menu__sublist").slideUp("slow");
-      $(".make-contribution-additional__menu li .menu__link").removeClass(
-        "orange"
-      );
-      $(".make-contribution-additional__menu li .menu__arrow").removeClass(
-        "_active"
-      );
     });
 
     $(".language li, .menu__list li").click(function () {
@@ -245,71 +281,6 @@ $(document).ready(function () {
       }
     );
   }
-
-  //ARTICLES SLIDE TOGGLE
-
-  $(".articles-block-text__subtitle").click(function () {
-    $(this).toggleClass("active");
-    $(this)
-      .closest(".articles-block")
-      .find(".articles-block-list")
-      .slideToggle("slow");
-  });
-
-  // ANNOTATION
-  $(".new-books-block-description-annotation__toggle").click(function () {
-    $(this)
-      .closest(".new-books-block-description-annotation")
-      .find(".new-books-block-description-annotation__text")
-      .slideToggle("slow");
-    $(this).toggleClass("active");
-  });
-
-  // ADDITION
-  $(".make-contribution-additional__menu li .menu__link").click(function () {
-    $(".make-contribution-additional__menu .menu__sublist").slideToggle("slow");
-    $(".make-contribution-additional__menu li .menu__link").toggleClass(
-      "orange"
-    );
-    $(".make-contribution-additional__menu li .menu__arrow").toggleClass(
-      "_active"
-    );
-
-    $(".menu__list li .menu__sublist").slideUp("slow");
-    $(".menu__list li .menu__link").removeClass("orange");
-    $(".menu__list li .menu__arrow").removeClass("_active");
-
-    $(".language li .menu__sublist").slideUp("slow");
-    $(".language li .menu__link").removeClass("orange");
-    $(".language li .menu__arrow").removeClass("_active");
-  });
-
-  // BODY LISTENER
-  $(document).on("click", "body", function (e) {
-    if (
-      !$(e.target).is("li .menu__link") &&
-      !$(e.target).is("li .menu__sublink") &&
-      !$(e.target).is("li .menu__sublink span") &&
-      !$(e.target).is("li .sublist-li") &&
-      !$(e.target).is("li .menu__sublist")
-    ) {
-      $(".make-contribution-additional__menu").find(".menu__sublist").slideUp();
-      $(".make-contribution-additional__menu")
-        .find(".menu__link")
-        .removeClass("orange");
-      $(".make-contribution-additional__menu")
-        .find(".menu__arrow")
-        .removeClass("_active");
-
-      $(".language li .menu__arrow").removeClass("_active");
-      $(".language li .menu__sublist").slideUp("slow");
-      $(".language li .menu__link").removeClass("orange");
-
-      $(".menu__list li .menu__arrow").removeClass("_active");
-      $(".menu__list li .menu__sublist").slideUp("slow");
-      $(".menu__list li .menu__link").removeClass("orange");
-    }
-  });
 
   // ANIMATE ON SCROLL
   AOS.init();

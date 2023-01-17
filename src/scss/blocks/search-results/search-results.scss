@@ -19,6 +19,10 @@
   margin-bottom: 30px;
   height: auto;
   box-shadow: 3px 6px 10px #45454540;
+  transition: box-shadow 0.3s linear;
+  &:hover {
+    box-shadow: 6px 6px 15px #45454540;
+  }
   // .search-results-block__img
 
   &__img {

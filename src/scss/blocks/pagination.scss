@@ -16,14 +16,34 @@
     padding: 10px 15px;
     border: 1px solid $main-dark;
     margin: 10px;
-    &:first-child,
-    &:last-child {
-      background-color: $main-dark;
+    transition: color 0.3s linear;
+    &:hover {
       color: $orange;
     }
-    &:first-child {
-      background-color: $main-dark;
+    &:first-child,
+    &:last-child {
+      position: relative;
       color: $orange;
+      z-index: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 60%;
+        width: 100%;
+        background: $main-dark;
+        z-index: -1;
+        transition: height 0.2s linear;
+      }
+
+      &:hover {
+        &::before {
+          height: 100%;
+        }
+      }
+    }
+    &:first-child {
       margin-right: 20px;
       margin-left: 0;
     }
@@ -34,7 +54,7 @@
     &:nth-child(2) {
       padding: 10px 16px;
     }
-    &.active{
+    &.active {
       background-color: $main-dark;
       color: $orange;
     }
