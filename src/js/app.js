@@ -194,6 +194,14 @@ $(document).ready(function () {
     ev.preventDefault();
   });
 
+  // ARTICLES DETAILS SHOW BUTTON
+  $(".links__show-button").click(function () {
+    $(this)
+      .closest(".col-12")
+      .find(".hidden-container.d-none")
+      .slideToggle("slow");
+  });
+
   //ARTICLES SLIDE TOGGLE
 
   $(".articles-block-text__subtitle").click(function () {
