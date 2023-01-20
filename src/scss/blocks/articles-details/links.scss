@@ -58,6 +58,10 @@
     align-items: center;
     font-size: 15px;
     color: $orange;
+    transition: color 0.3s linear;
+    &:hover {
+      color: $brown;
+    }
     img {
       height: 12px;
       margin-left: 6px;

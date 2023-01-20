@@ -16,26 +16,32 @@
     padding: 10px 15px;
     border: 1px solid $main-dark;
     margin: 10px;
-    transition: color 0.3s linear;
+    transition: all 0.3s linear;
     &:hover {
       color: $orange;
+      border: 1px solid $orange;
     }
     &:first-child,
     &:last-child {
       position: relative;
-      color: $orange;
+      color: $main-dark;
       z-index: 1;
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 60%;
-        width: 100%;
-        background: $main-dark;
-        z-index: -1;
-        transition: height 0.2s linear;
+      transition: all 0.3s linear;
+      &:hover {
+        color: $orange;
+        border: 1px solid $orange;
       }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      //   height: 60%;
+      //   width: 100%;
+      //   background: $main-dark;
+      //   z-index: -1;
+      //   transition: height 0.2s linear;
+      // }
 
       &:hover {
         &::before {

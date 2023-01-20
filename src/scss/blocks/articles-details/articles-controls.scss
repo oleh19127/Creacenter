@@ -50,9 +50,12 @@
   &__title {
     font-size: 12px;
     color: $main-dark;
-    span {
+    a {
       font-size: 14px;
       color: $orange;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -71,6 +74,10 @@
     padding: 13px 16px;
     background: $main-dark;
     margin-left: 35px;
+    transition: all 0.3s linear;
+    &:hover {
+      background: $black;
+    }
     img {
       transform: scaleX(-1);
     }
@@ -81,9 +88,12 @@
   &__title {
     font-size: 12px;
     color: $main-dark;
-    span {
+    a {
       font-size: 14px;
       color: $orange;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
