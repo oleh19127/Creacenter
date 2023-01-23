@@ -59,6 +59,26 @@ $(document).ready(function () {
     }, 50);
   }
 
+  // INTRO NEWS SECTION
+  if ($(".similar-materials-container")[0]) {
+    let newsTittleHeights = [];
+    setTimeout(() => {
+      const newsTittle = $(".similar-materials-container-block-info__title");
+
+      console.log(newsTittle);
+
+      $.each(newsTittle, function (index, value) {
+        newsTittleHeights.push($(this).height());
+      });
+
+      const biggestHeightTittle = Math.max(...newsTittleHeights);
+
+      $.each(newsTittle, function (index, value) {
+        $(this).height(biggestHeightTittle);
+      });
+    }, 50);
+  }
+
   // ARTICLES
   if ($(".search-results")) {
     let newsTittleHeights = [];
