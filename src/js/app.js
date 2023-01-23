@@ -299,7 +299,7 @@ $(document).ready(function () {
     if (
       $(this).scrollTop() >
       $(
-        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro, .books-intro, .museum-intro, .articles-intro"
+        ".intro, .about-us-intro, .help-us-intro, .contact-intro, .team-intro, .lectures-intro, .seminars-intro, .video-intro, .books-intro, .museum-intro, .articles-intro, .articles-details-intro"
       ).height()
     ) {
       $(".go-up").removeClass("none");
@@ -324,6 +324,10 @@ $(document).ready(function () {
   // SEARCH INPUT
   $(".search-input input").click(function () {
     $(".search-input img").addClass("none");
+  });
+
+  $(".search-icon").click(function () {
+    $(this).closest(".menu__body").find(".search-input").toggleClass("active");
   });
 
   // BURGER
