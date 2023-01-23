@@ -6,6 +6,9 @@
     color: $main-dark;
     font-weight: 700;
     margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 }
 
@@ -13,16 +16,21 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  @media screen and (max-width: 991px) {
+    justify-content: center;
+  }
 }
 .similar-materials-container-block {
-  // max-height: 110px;
   height: 100%;
 
   display: flex;
   align-items: center;
   margin: 0px 30px 30px 0px;
   box-shadow: 3px 6px 10px #45454540;
-
+  @media screen and (max-width: 991px) {
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+  }
   // .similar-materials-container-block__img
 
   &__img {
@@ -35,8 +43,9 @@
 .similar-materials-container-block-info {
   padding: 12px 15px;
   width: 252px;
-  // height: 100%;
-  // max-height: 110px;
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
 
   // .similar-materials-container-block-info__date
 
