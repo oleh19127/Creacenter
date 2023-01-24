@@ -23,7 +23,6 @@ LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 */
 
 $(document).ready(function () {
-  // INTRO NEWS SECTION
   if ($(".right-side-news__image-with-title-container")[0]) {
     let newsTittleHeights = [];
     let newsTextHeights = [];
@@ -59,7 +58,6 @@ $(document).ready(function () {
     }, 50);
   }
 
-  // INTRO NEWS SECTION
   if ($(".similar-materials-container")[0]) {
     let newsTittleHeights = [];
     setTimeout(() => {
@@ -79,7 +77,6 @@ $(document).ready(function () {
     }, 50);
   }
 
-  // ARTICLES
   if ($(".search-results")) {
     let newsTittleHeights = [];
     let newsTextHeights = [];
@@ -116,7 +113,6 @@ $(document).ready(function () {
     }, 50);
   }
 
-  // BOOKS PAGE
   if ($(".all-books .new-books-block")) {
     let booksTittleHeights = [];
     let booksDateHeights = [];
@@ -178,7 +174,6 @@ $(document).ready(function () {
     }, 50);
   }
 
-  // VIDEO SECTION
   $(".play-button").click(function () {
     $(this).addClass("none");
     const imgPlaceholder = $(this)
@@ -214,15 +209,12 @@ $(document).ready(function () {
     ev.preventDefault();
   });
 
-  // ARTICLES DETAILS SHOW BUTTON
   $(".links__show-button").click(function () {
     $(this)
       .closest(".col-12")
       .find(".hidden-container.d-none")
       .slideToggle("slow");
   });
-
-  //ARTICLES SLIDE TOGGLE
 
   $(".articles-block-text__subtitle").click(function () {
     $(this).find(".articles-block-text-subtitle__arrow").toggleClass("active");
@@ -232,7 +224,6 @@ $(document).ready(function () {
       .slideToggle("slow");
   });
 
-  // ANNOTATION
   $(".new-books-block-description-annotation__toggle").click(function () {
     $(this)
       .closest(".new-books-block-description-annotation")
@@ -241,7 +232,6 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  // ADDITION
   $(".make-contribution-additional-menu-title").click(function () {
     $(this).toggleClass("orange");
     $(this)
@@ -254,7 +244,6 @@ $(document).ready(function () {
       .slideToggle("slow");
   });
 
-  // BODY LISTENER
   $(document).on("click", "body", function (e) {
     if (
       !$(e.target).is("li .menu__link") &&
@@ -274,7 +263,6 @@ $(document).ready(function () {
     }
   });
 
-  // MENU
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
@@ -310,10 +298,7 @@ $(document).ready(function () {
     );
   }
 
-  // ANIMATE ON SCROLL
   AOS.init();
-
-  // SHOW GO UP BUTTON IF SCROLL AFTER INTRO
 
   $(window).scroll(function () {
     if (
@@ -328,20 +313,15 @@ $(document).ready(function () {
     }
   });
 
-  // SCROLL TOP
   $(".go-up").click(function () {
     $("html").animate({ scrollTop: 0 }, 600);
     return false;
   });
 
-  // PRELOAD
-  // $(".loading").addClass("none");
   $("body").removeClass("_lock");
 
-  // DYNAMIC ADAPTIVE
   useDynamicAdapt();
 
-  // SEARCH INPUT
   $(".search-input input").click(function () {
     $(".search-input img").addClass("none");
   });
@@ -350,14 +330,12 @@ $(document).ready(function () {
     $(this).closest(".menu__body").find(".search-input").toggleClass("active");
   });
 
-  // BURGER
   $(".menu__icon").click(function () {
     $(".menu__icon").toggleClass("_active");
     $(".menu__body").toggleClass("_active");
     $("body").toggleClass("_lock");
   });
 
-  // IBG METHOD
   if ($(".ibg")) {
     function ibg() {
       $.each($(".ibg"), function (index, val) {
@@ -373,7 +351,6 @@ $(document).ready(function () {
     ibg();
   }
 
-  // INDEX SLIDER
   if ($(".intro-swiper")) {
     let indexSwiper = new Swiper(".intro-swiper", {
       autoplay: {
@@ -390,7 +367,6 @@ $(document).ready(function () {
     });
   }
 
-  //OUR TEAM SLIDER
   if ($(".our-team-swiper")) {
     let OurTeamSwiper = new Swiper(".our-team-swiper", {
       centeredSlides: true,
